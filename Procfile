@@ -1,0 +1,1 @@
+web: gunicorn home_learning_hub.wsgi
