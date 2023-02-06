@@ -35,4 +35,4 @@ class Appointment(models.Model):
     comment = models.TextField(default=None)
 
     def __str__(self):
-        return self.parent_name
+        return f"{self.date} | {self.parent_name} | {self.child_name}"
