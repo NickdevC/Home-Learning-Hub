@@ -32,6 +32,7 @@ class Appointment(models.Model):
     date = models.DateField()
     time = models.CharField(
         max_length=50, choices=APPOINTMENT_TIMES, default='0')
+    comment = models.TextField(default=None)
 
-    # def __str__(self):
-    #     return self.parent_name
+    def __str__(self):
+        return self.parent_name

@@ -1,6 +1,8 @@
 from django.contrib import admin
 from .models import Appointment
+from django_summernote.admin import SummernoteModelAdmin
 
-admin.site.register(Appointment)
 
-# Register your models here.
+@admin.register(Appointment)
+class PostAdmin(SummernoteModelAdmin):
+    summernote_fields = ('comment')
