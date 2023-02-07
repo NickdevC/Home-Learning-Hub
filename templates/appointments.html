@@ -8,27 +8,22 @@
         <!-- Appointments Column -->
         <div class="row m-2 row d-flex justify-content-center">
             <div class="col-sm-8">
-                <h4 class="mb-4 text-center cake-menu-header ">"Appointments"</h4>
+                <h1 class="mb-4 text-center appointments-header ">Appointments</h1>
                 <!-- Loop through list to display each appointment -->
         
-                <!-- {% if appointment_items.choclate_items %}
+                {% for appointment in appointment_items %}
         
-                {% for cakeitems in cake_items.choclate_items %}
+                <h3><strong>FAO:</strong> {{ appointment.get_teacher_name_display }}</h3>
         
-                <h4>{{ cakeitems.cake_name}}</h4>
-        
-                <p>{{ cakeitems.description }}</p>
-        
-                <p>Dietary |<strong>{{ cakeitems.dietary }}</strong></p>
-        
-                <p>Allergens | <strong>{{ cakeitems.allergens}}</strong></p>
+                <h4><strong>Parent:</strong> {{ appointment.parent_name }} | <strong>Pupil:</strong> {{ appointment.child_name }}</h4>
+
+                <p><strong>Date:</strong> {{ appointment.date }} | <strong>Time:</strong> {{ appointment.get_time_display }}</p>
+
+                <p>{{ appointment.comment|safe }}</p>
                 <hr>
                 {% endfor%}
         
-                {% else %}
-                <p>Menu being updated. No items found</p>
-        
-                {% endif %} -->
+
         
             </div>
         </div>
