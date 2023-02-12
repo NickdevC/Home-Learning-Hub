@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-
+# Custom choices
 APPOINTMENT_TIMES = (
     ('0', '15:00 - 15:15'),
     ('1', '15:15 - 15:30'),

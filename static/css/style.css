@@ -1,4 +1,20 @@
+/*----------- Global settings ------------*/
+
+
+/*----------- Headers --------------------*/
+h1 {
+    font-family: 'Schoolbell', cursive;
+}
+
+
 .appointments-header {
     margin-top: 10%;
     color: rgb(52, 204, 153);
+}
+
+
+/*------------ Navigation ----------------*/
+.nav-log, nav a {
+    font-family: 'Schoolbell', cursive;
+    font-size: 2rem;
 }
