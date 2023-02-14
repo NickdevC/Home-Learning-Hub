@@ -1,2 +1,25 @@
 {% extends "base.html" %}
 {% load static %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="container-fluid px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+            <h1>
+                Book an appointment
+            </h1>
+            <h2>Use the form below to book an appointment with your child's teacher</h2>
+            <div class="appointmentcard">
+                <form method="post" id="appointmentForm">
+                    {{ appointment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
