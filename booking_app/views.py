@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import generic
 from .models import Appointment
 from .forms import AppointmentForm
+from django.contrib import messages
 
 
 # Render index.html and appointment form
