@@ -2,8 +2,17 @@
 
 
 /*----------- Headers --------------------*/
-h1 {
+h1, h2, h3 {
     font-family: 'Schoolbell', cursive;
+}
+
+h1 {
+    font-size: 3rem;
+    color: rgb(52, 204, 153);
+}
+
+h2 {
+    font-size: 2rem;
 }
 
 
@@ -14,7 +23,19 @@ h1 {
 
 
 /*------------ Navigation ----------------*/
+.navbar .navbar-brand {
+    color: rgb(30, 176, 127);
+}
+
+.navbar .navbar-brand:hover {
+    color: rgb(130, 234, 199);
+}
+
 .nav-log, nav a {
     font-family: 'Schoolbell', cursive;
     font-size: 2rem;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: rgb(130, 234, 199);
 }
