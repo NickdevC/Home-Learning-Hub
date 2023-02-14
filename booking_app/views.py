@@ -6,22 +6,6 @@ from .forms import AppointmentForm
 
 # Render index.html
 def index(request):
-    """ Return homepage """
-    return render(request, 'index.html')
-
-
-# Render appointments.html
-# class AppointmentList(generic.ListView):
-#     """
-#     Render appointment list from the database
-#     """
-#     model = Appointment
-#     queryset = Appointment.objects.all().order_by('-date')
-#     template_name = 'appointments.html'
-#     context_object_name = 'appointment_items'
-
-# User created appointmentment using form
-def appointment_template_view(request):
     form = AppointmentForm()
     if request.method == 'POST':
         form = AppointmentForm(request.POST)
@@ -35,6 +19,17 @@ def appointment_template_view(request):
             messages.error(request, f"CAPTCHA Invalid. Letters are case\
                 sensitive. Please try again.")
     return render(request, 'index.html', {'form': form})
+
+
+# Render appointments.html
+# class AppointmentList(generic.ListView):
+#     """
+#     Render appointment list from the database
+#     """
+#     model = Appointment
+#     queryset = Appointment.objects.all().order_by('-date')
+#     template_name = 'appointments.html'
+#     context_object_name = 'appointment_items'
 
 
 # Render appointment cards in appointments.html
