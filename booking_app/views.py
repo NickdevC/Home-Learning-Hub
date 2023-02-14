@@ -4,7 +4,7 @@ from .models import Appointment
 from .forms import AppointmentForm
 
 
-# Render index.html
+# Render index.html and appointment form
 def index(request):
     form = AppointmentForm()
     if request.method == 'POST':
@@ -19,17 +19,6 @@ def index(request):
             messages.error(request, f"CAPTCHA Invalid. Letters are case\
                 sensitive. Please try again.")
     return render(request, 'index.html', {'form': form})
-
-
-# Render appointments.html
-# class AppointmentList(generic.ListView):
-#     """
-#     Render appointment list from the database
-#     """
-#     model = Appointment
-#     queryset = Appointment.objects.all().order_by('-date')
-#     template_name = 'appointments.html'
-#     context_object_name = 'appointment_items'
 
 
 # Render appointment cards in appointments.html
