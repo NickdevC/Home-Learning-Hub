@@ -13,8 +13,8 @@ def index(request):
         if form.is_valid():
             form.save()
             human = True
-            messages.success(request, f"Thanks for making an appointment, we\
-                will email you soon to confirm.")
+            messages.success(request, f"Thanks for making an appointment, your\
+                child's teacher will email you soon to confirm.")
             return redirect('index')
         else:
             messages.error(request, f"CAPTCHA Invalid. Letters are case\
@@ -28,4 +28,4 @@ class ViewAppointments(generic.ListView):
     queryset = Appointment.objects.all().order_by('-date')
     template_name = 'appointments.html'
     context_object_name = 'appointment_items'
-    paginate_by = 9
+    paginate_by = 6
