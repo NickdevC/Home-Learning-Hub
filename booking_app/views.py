@@ -1,8 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
 from .models import Appointment
 from .forms import AppointmentForm
 from django.contrib import messages
+from django.urls import reverse
 
 
 # Render index.html and appointment form
@@ -32,9 +33,9 @@ class ViewAppointments(generic.ListView):
 
 
 # Delete an appointment
-def delete_appointment(request, item_id):
-    item = get_object_or_404(Appointment, id=item_id)
-    item.delete()
+def delete_appointment(request, appointment_id):
+    appointment = get_object_or_404(Appointment, pk=appointment_id)
+    appointment.delete()
     messages.add_message(request, messages.SUCCESS, f"Appointment successfully\
         deleted!")
     return redirect('appointments')

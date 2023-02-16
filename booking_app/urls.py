@@ -5,5 +5,5 @@ from django.urls import path
 urlpatterns = [
     path('', views.index, name='index'),
     path('appointments/', views.ViewAppointments.as_view(), name='appointments'),
-    path('delete/<item_id>', views.delete_appointment, name='delete'),
+    path('delete/<int:appointment_id>', views.delete_appointment, name='delete'),
 ]

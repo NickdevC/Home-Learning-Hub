@@ -20,7 +20,7 @@
                 <p><strong>Date:</strong> {{ appointment.date }} | <strong>Time:</strong> {{ appointment.get_time_display }}</p>
 
                 <p>{{ appointment.comment|safe }}</p>
-                <a href="/delete/{{ item.id }}">Delete</a>
+                <a href="{% url 'delete' appointment.id %}">Delete</a>
                 <hr>
                 {% endfor%}
             </div>
