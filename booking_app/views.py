@@ -17,8 +17,8 @@ def index(request):
                 child's teacher will email you soon to confirm.")
             return redirect('index')
         else:
-            messages.error(request, f"CAPTCHA Invalid. Letters are case\
-                sensitive. Please try again.")
+            messages.error(request, f"There was an error submitting your\
+                appointment. Please try again.")
     return render(request, 'index.html', {'form': form})
 
 
@@ -29,3 +29,12 @@ class ViewAppointments(generic.ListView):
     template_name = 'appointments.html'
     context_object_name = 'appointment_items'
     paginate_by = 6
+
+
+# Delete an appointment
+def delete_appointment(request, item_id):
+    item = get_object_or_404(Appointment, id=item_id)
+    item.delete()
+    messages.add_message(request, messages.SUCCESS, f"Appointment successfully\
+        deleted!")
+    return redirect('appointments')
