@@ -24,7 +24,7 @@
                 <p>{{ appointment.comment|safe }}</p>
 
                 <!-- Delete button -->
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalDelete">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete">
                     Delete
                 </button>
                 <!-- Delete modal -->
@@ -34,7 +34,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title">Delete Appointment</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
@@ -43,7 +43,7 @@
                                 <p>This action cannot be undone. Do you wish to continue?</p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Go back</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go back</button>
                                 <a href="{% url 'delete' appointment.id %}" class="btn btn-danger">Delete</a>
                             </div>
                         </div>
