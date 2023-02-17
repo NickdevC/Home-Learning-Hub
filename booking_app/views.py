@@ -39,3 +39,18 @@ def delete_appointment(request, appointment_id):
     messages.add_message(request, messages.SUCCESS, f"Appointment successfully\
         deleted!")
     return redirect('appointments')
+
+
+# Edit an appointment
+def edit_appointment(request, appointment_id):
+    appointment = get_object_or_404(Appointment, id=appointment_id)
+    if request.method == 'POST':
+        form = AppointmentForm(request.POST, instance=appointment)
+        if form.is_valid():
+            form.save()
+            return redirect('appointments')
+    form = AppointmentForm(instance=appointment)
+    context = {
+        'form': form
+    }
+    return render(request, 'edit_appointment.html', context)
