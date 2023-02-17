@@ -1,5 +1,7 @@
 from .models import Appointment
 from django import forms
+from django.forms import ModelForm
+from django.core.exceptions import NON_FIELD_ERRORS
 
 
 # Date selector
@@ -14,4 +16,10 @@ class AppointmentForm(forms.ModelForm):
         fields = '__all__'
         widgets = {
             'date': DateInput(),
+        }
+        error_messages = {
+            NON_FIELD_ERRORS: {
+                'unique_together': "Please select another time and date\
+                    combination and try again.",
+            }
         }

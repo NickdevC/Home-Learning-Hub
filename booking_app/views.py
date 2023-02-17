@@ -19,7 +19,7 @@ def index(request):
             return redirect('index')
         else:
             messages.error(request, f"There was an error submitting your\
-                appointment. Please try again.")
+                appointment. Please try a different date/time.")
     return render(request, 'index.html', {'form': form})
 
 
