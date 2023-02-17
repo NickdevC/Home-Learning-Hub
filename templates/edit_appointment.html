@@ -1,16 +1,25 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<h1>Edit appointment:</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <div>
-        <p>
-            <button type="submit">Update appointment</button>
-        </p>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="row m-2 row d-flex justify-content-center">
+            <div class="mb-4 text-center">
+                <h1 class="mb-4 text-center">Edit appointment:</h1>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div>
+                        <p>
+                            <button type="submit">Update appointment</button>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-</form>
+</div>
 
 
 {%endblock%}
