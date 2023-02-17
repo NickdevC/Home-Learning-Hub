@@ -33,6 +33,9 @@ class Appointment(models.Model):
     time = models.CharField(
         max_length=50, choices=APPOINTMENT_TIMES, default='0')
     comment = models.TextField(default=None)
+  
+    class Meta:
+        unique_together = ["teacher_name", "date", "time"]
 
     def __str__(self):
         return f"{self.date} | {self.parent_name} | {self.child_name}"
