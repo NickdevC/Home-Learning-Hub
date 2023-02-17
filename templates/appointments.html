@@ -22,6 +22,9 @@
                     {{ appointment.get_time_display }}</p>
 
                 <p>{{ appointment.comment|safe }}</p>
+                
+                <!-- Edit button -->
+                <a href="/edit/{{ appointment.id }}" class="btn btn-primary">Edit</a>
 
                 <!-- Delete button -->
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete">

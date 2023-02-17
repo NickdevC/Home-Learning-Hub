@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h1>Edit appointment:</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div>
+        <p>
+            <button type="submit">Update appointment</button>
+        </p>
+    </div>
+</form>
+
+
+{%endblock%}
