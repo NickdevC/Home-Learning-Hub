@@ -5,6 +5,7 @@ from .models import Resource
 from django.contrib import messages
 from django.urls import reverse
 
+
 class DisplayResource(generic.ListView):
     model = Resource
     queryset = Resource.objects.all().order_by('-created_on')
