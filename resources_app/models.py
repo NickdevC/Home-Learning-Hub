@@ -18,5 +18,5 @@ class Resource(models.Model):
     subject = models.CharField(
         max_length=80, choices=SUBJECTS, default='0')
     description = models.CharField(max_length=150)
-    file = models.FileField(upload_to='media/', blank=True)
+    file = CloudinaryField(resource_type='raw', blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
