@@ -1,22 +1,19 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<h1 class="mb-4 text-center">Resource Library</h1>
-<div class="container">
+
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <div class="row">
-                <div class="col-md-8">
-                    <h1 class="edit-title">Upload a resource: </h1>
-                </div>
+        <div class="row m-2 row d-flex justify-content-center">
+            <div class="mb-4 text-center">
+                <h1 class="mb-4 text-center">Upload a resource:</h1>
+                <!-- Form for uploading a resource to resources.html -->
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn btn-signup btn-lg submitBtn">Upload</button>
+                </form>
             </div>
-
-            <form method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button class="btn btn-dark">POST</button>
-            </form>
-
         </div>
     </div>
 </div>

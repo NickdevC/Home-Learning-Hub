@@ -7,19 +7,15 @@
         <div class="row m-2 row d-flex justify-content-center">
             <div class="mb-4 text-center">
                 <h1 class="mb-4 text-center">Edit appointment:</h1>
+                <!-- Form for editing the appointment model -->
                 <form method="POST">
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <div>
-                        <p>
-                            <button type="submit">Update appointment</button>
-                        </p>
-                    </div>
+                    <button type="submit" class="btn btn-signup btn-lg submitBtn">Update appointment</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
-
 
 {%endblock%}
