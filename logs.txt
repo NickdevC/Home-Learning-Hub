@@ -1,0 +1,24 @@
+2023-02-20T14:15:21.518488+00:00 app[web.1]:     self.stop()
+2023-02-20T14:15:21.518490+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/arbiter.py", line 393, in stop
+2023-02-20T14:15:21.518581+00:00 app[web.1]:     time.sleep(0.1)
+2023-02-20T14:15:21.518583+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+2023-02-20T14:15:21.518662+00:00 app[web.1]:     self.reap_workers()
+2023-02-20T14:15:21.518665+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+2023-02-20T14:15:21.519061+00:00 app[web.1]:     raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2023-02-20T14:15:21.519062+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2023-02-20T14:15:21.675221+00:00 heroku[web.1]: Process exited with status 1
+2023-02-20T14:15:21.725923+00:00 heroku[web.1]: State changed from up to crashed
+
+
+After second deployment (14:24)
+
+2023-02-20T14:24:10.346922+00:00 app[web.1]:   File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+2023-02-20T14:24:10.346922+00:00 app[web.1]: ModuleNotFoundError: No module named 'active_link'
+2023-02-20T14:24:10.347111+00:00 app[web.1]: [2023-02-20 14:24:10 +0000] [8] [INFO] Worker exiting (pid: 8)
+2023-02-20T14:24:10.478874+00:00 app[web.1]: [2023-02-20 14:24:10 +0000] [2] [WARNING] Worker with pid 8 was terminated due to signal 15
+2023-02-20T14:24:10.576133+00:00 app[web.1]: [2023-02-20 14:24:10 +0000] [2] [INFO] Shutting down: Master
+2023-02-20T14:24:10.576233+00:00 app[web.1]: [2023-02-20 14:24:10 +0000] [2] [INFO] Reason: Worker failed to boot.
+2023-02-20T14:24:10.806078+00:00 heroku[web.1]: Process exited with status 3
+2023-02-20T14:24:10.856267+00:00 heroku[web.1]: State changed from up to crashed
+2023-02-20T14:24:13.783678+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nickdevc-home-learning-hub.herokuapp.com request_id=20050fc2-76ee-420f-9e23-de6f412e1fae fwd="51.191.153.170" dyno= connect= service= status=503 bytes= protocol=https
+2023-02-20T14:24:14.103673+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nickdevc-home-learning-hub.herokuapp.com request_id=e0de2b7f-36a8-4fb2-8e67-e85209235e3f fwd="51.191.153.170" dyno= connect= service= status=503 bytes= protocol=https
