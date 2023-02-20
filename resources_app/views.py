@@ -19,7 +19,7 @@ class DisplayResource(generic.ListView):
 def uploadResource(request):
     form = ResourceForm()
     if request.method == 'POST':
-        form = ResourceForm(request.POST)
+        form = ResourceForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             human = True
