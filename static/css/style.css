@@ -17,7 +17,7 @@ h2 {
 
 
 .page-header {
-    margin-top: 6%;
+    margin-top: 3%;
     color: rgb(52, 204, 153);
 }
 
@@ -39,6 +39,14 @@ h2 {
 .navbar .navbar-nav .nav-link:hover {
     color: rgb(130, 234, 199);
     transform: translateY(5px);
+}
+
+/*----------- Footer ------------------*/
+.footer {
+    background-color: rgb(198, 246, 230);
+    box-shadow: 0px -5px 5px rgb(198, 246, 230);
+    padding-top: 0.5rem;
+    padding-bottom: 0.2rem;
 }
 
 /*----------- Page Nav ----------------*/
@@ -77,7 +85,7 @@ h2 {
     background-color: rgb(239, 245, 244);
     border-radius: 10px;
     border: solid 2px;
-    border-color: rgb(130, 234, 199);
+    border-color: rgb(52, 204, 153);
     padding: 1rem;
     margin: 1rem;
 }
@@ -86,4 +94,8 @@ h2 {
     background-color: white;
     border-radius: 5px;
     padding: 0.5rem;
+}
+
+.content-card {
+    box-shadow: -5px 5px 5px rgb(220, 221, 222);
 }

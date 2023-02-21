@@ -35,7 +35,7 @@
 
 </head>
 
-<body>
+<body class="d-flex flex-column h-100">
     <!-- Naviagtion -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
@@ -47,17 +47,20 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link {% active_link 'index' strict=True %}" aria-current="page" href="{% url 'index' %}">Home</a>
+                        <a class="nav-link {% active_link 'index' strict=True %}" aria-current="page"
+                            href="{% url 'index' %}">Home</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% active_link 'appointments' strict=True %}" href="{% url 'appointments' %}">Appointments</a>
+                        <a class="nav-link {% active_link 'appointments' strict=True %}"
+                            href="{% url 'appointments' %}">Appointments</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'edit_resources' %}">Upload Resources</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" role="button" data-bs-toggle="modal" data-bs-target="#modalLogout">Logout</a>
+                        <a class="nav-link" role="button" data-bs-toggle="modal"
+                            data-bs-target="#modalLogout">Logout</a>
                         <div id="modalLogout" class="modal fade" tabindex="-1" data-backdrop="static"
                             data-keyboard="false" aria-hidden="true">
                             <div class="modal-dialog">
@@ -73,8 +76,10 @@
                                         <p>Are you sure you wish to continue?</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger modal-btn" data-bs-dismiss="modal">No</button>
-                                        <a href="{% url 'account_logout' %}" class="btn btn-success modal-btn">Yes - Log me out!</a>
+                                        <button type="button" class="btn btn-danger modal-btn"
+                                            data-bs-dismiss="modal">No</button>
+                                        <a href="{% url 'account_logout' %}" class="btn btn-success modal-btn">Yes - Log
+                                            me out!</a>
                                     </div>
                                 </div>
                             </div>
@@ -119,8 +124,15 @@
         {% endblock content %}
     </main>
     <!-- Footer -->
-    <footer>
-
+    <footer class="footer mt-auto py-3 footer-container">
+        <div class="row align-items-center">
+            <div class="col">
+                <p>Nick Coles</p>
+            </div>
+            <div class="col">
+                <p>Github</p>
+            </div>
+        </div>
     </footer>
 
     <!-- Message handler timer -->
