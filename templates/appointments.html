@@ -2,73 +2,73 @@
 {% load static %}
 {% block content %}
 
+
+<div class="col-12 text-center mt-3 mb-3">
+    <h1 class="mb-4 text-center appointments-header">Appointments</h1>
+</div>
 <div class="container-fluid">
-    <div class="row">
+    <div class="row justify-content-center">
+        {% for appointment in appointment_items %}
+        <div class="col-md-3 appointment-card">
+            <h3><strong>FAO:</strong> {{ appointment.get_teacher_name_display }}</h3>
 
-        <!-- Appointments Column -->
-        <div class="row m-2 row d-flex justify-content-center">
-            <div class="col-sm-8">
-                <h1 class="mb-4 text-center appointments-header">Appointments</h1>
-                <!-- Loop through list to display each appointment -->
+            <h4><strong>Parent:</strong> {{ appointment.parent_name }} | <strong>Pupil:</strong>
+                {{ appointment.child_name }}</h4>
 
-                {% for appointment in appointment_items %}
+            <p><strong>Date:</strong> {{ appointment.date }} | <strong>Time:</strong>
+                {{ appointment.get_time_display }}</p>
 
-                <h3><strong>FAO:</strong> {{ appointment.get_teacher_name_display }}</h3>
+            <p>{{ appointment.comment|safe }}</p>
 
-                <h4><strong>Parent:</strong> {{ appointment.parent_name }} | <strong>Pupil:</strong>
-                    {{ appointment.child_name }}</h4>
+            <!-- Edit button -->
+            <a href="/edit/{{ appointment.id }}" class="btn btn-primary">Edit</a>
 
-                <p><strong>Date:</strong> {{ appointment.date }} | <strong>Time:</strong>
-                    {{ appointment.get_time_display }}</p>
-
-                <p>{{ appointment.comment|safe }}</p>
-                
-                <!-- Edit button -->
-                <a href="/edit/{{ appointment.id }}" class="btn btn-primary">Edit</a>
-
-                <!-- Delete button -->
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete">
-                    Delete
-                </button>
-                <!-- Delete modal -->
-                <div id="modalDelete" class="modal fade" tabindex="-1" data-backdrop="static" data-keyboard="false"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Delete Appointment</h5>
-                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p>You are about to delete this appointment.</p>
-                                <p>This action cannot be undone. Do you wish to continue?</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal">Go back</button>
-                                <a href="{% url 'delete' appointment.id %}" class="btn btn-danger modal-btn">Delete</a>
-                            </div>
+            <!-- Delete button -->
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete">
+                Delete
+            </button>
+            <!-- Delete modal -->
+            <div id="modalDelete" class="modal fade" tabindex="-1" data-backdrop="static" data-keyboard="false"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Delete Appointment</h5>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>You are about to delete this appointment.</p>
+                            <p>This action cannot be undone. Do you wish to continue?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal">Go
+                                back</button>
+                            <a href="{% url 'delete' appointment.id %}" class="btn btn-danger modal-btn">Delete</a>
                         </div>
                     </div>
                 </div>
-                <hr>
-                {% endfor%}
             </div>
         </div>
-
-        {% if is_paginated %}
-        <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-center">
-                {% if page_obj.has_previous %}
-                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-                {% endif %}
-                {% if page_obj.has_next %}
-                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
-                {% endif %}
-            </ul>
-        </nav>
-        {% endif %}
+        {% endfor%}
     </div>
-    {%endblock%}
+</div>
+
+
+{% if is_paginated %}
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
+</div>
+</div>
+{%endblock%}

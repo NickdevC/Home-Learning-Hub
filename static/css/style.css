@@ -69,3 +69,14 @@ h2 {
     background-color: rgb(30, 176, 127);
     transform: translateY(-5px);
 }
+
+
+/*----------- Appointments page ------*/
+.appointment-card {
+    background-color: rgb(239, 245, 244);
+    border-radius: 10px;
+    border: solid 2px;
+    border-color: rgb(130, 234, 199);
+    padding: 1rem;
+    margin: 1rem;
+}
