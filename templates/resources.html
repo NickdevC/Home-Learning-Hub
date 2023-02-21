@@ -1,41 +1,37 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+
+<div class="col-12 text-center mt-3 mb-3">
+    <h1 class="mb-4 text-center page-header">Resources</h1>
+</div>
 <div class="container-fluid">
-    <div class="row">
+    <div class="row justify-content-center">
+        {% for resource in resource_items %}
+        <div class="col-lg-2 col-md-3 col-sm-4 appointment-card">
+            <h3>{{ resource.resource_name }}</h3>
 
-        <!-- Resources Column -->
-        <div class="row m-2 row d-flex justify-content-center">
-            <div class="col-sm-8">
-                <h1 class="mb-4 text-center appointments-header">Resources</h1>
-                <!-- Loop through list to display each resource -->
+            <h4>{{ resource.get_subject_display }}</h4>
 
-                {% for resource in resource_items %}
-
-                <h3>{{ resource.resource_name }}</h3>
-
-                <h4>{{ resource.get_subject_display }}</h4>
-
-                <a href="{{ resource.file.url }}" target="_blank">{{ resource.resource_name }}</a>
-
-                <hr>
-                {% endfor%}
-            </div>
+            <a href="{{ resource.file.url }}" target="_blank">{{ resource.resource_name }}</a>
         </div>
-
-        {% if is_paginated %}
-        <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-center">
-                {% if page_obj.has_previous %}
-                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-                {% endif %}
-                {% if page_obj.has_next %}
-                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
-                {% endif %}
-            </ul>
-        </nav>
-        {% endif %}
+        {% endfor%}
     </div>
+</div>
 
-    {% endblock %}
+{% if is_paginated %}
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
+</div>
+
+{% endblock %}

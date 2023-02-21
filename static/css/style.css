@@ -16,7 +16,7 @@ h2 {
 }
 
 
-.appointments-header {
+.page-header {
     margin-top: 6%;
     color: rgb(52, 204, 153);
 }
@@ -62,6 +62,7 @@ h2 {
     color: rgb(30, 176, 127);
     background-color: antiquewhite;
     border-radius: 20px;
+    box-shadow: -5px 5px rgb(80, 78, 78);
 }
 
 .submitBtn:hover {

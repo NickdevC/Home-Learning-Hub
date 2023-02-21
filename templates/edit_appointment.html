@@ -2,11 +2,13 @@
 {% load static %}
 {% block content %}
 
+<div class="col-12 text-center mt-3 mb-3">
+    <h1 class="text-center page-header">Edit Appointment</h1>
+</div>
 <div class="container-fluid">
     <div class="row">
         <div class="row m-2 row d-flex justify-content-center">
-            <div class="mb-4 text-center">
-                <h1 class="mb-4 text-center">Edit appointment:</h1>
+            <div class="col-md-6 mb-4 text-center appointment-card">
                 <!-- Form for editing the appointment model -->
                 <form method="POST">
                     {% csrf_token %}
