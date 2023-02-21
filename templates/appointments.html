@@ -10,7 +10,7 @@
     <div class="row justify-content-center">
         {% for appointment in appointment_items %}
         <div class="col-md-3 appointment-card">
-            <h3><strong>FAO:</strong> {{ appointment.get_teacher_name_display }}</h3>
+            <h3><strong>{{ appointment.get_teacher_name_display }}</strong></h3>
 
             <h4><strong>Parent:</strong> {{ appointment.parent_name }} | <strong>Pupil:</strong>
                 {{ appointment.child_name }}</h4>
@@ -18,7 +18,7 @@
             <p><strong>Date:</strong> {{ appointment.date }} | <strong>Time:</strong>
                 {{ appointment.get_time_display }}</p>
 
-            <p>{{ appointment.comment|safe }}</p>
+            <p id="appointment-comment">{{ appointment.comment|safe }}</p>
 
             <!-- Edit button -->
             <a href="/edit/{{ appointment.id }}" class="btn btn-primary">Edit</a>
@@ -60,10 +60,10 @@
 <nav aria-label="Page navigation">
     <ul class="pagination justify-content-center">
         {% if page_obj.has_previous %}
-        <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="btn btn-lg submitBtn">&laquo; PREV </a></li>
         {% endif %}
         {% if page_obj.has_next %}
-        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+        <li><a href="?page={{ page_obj.next_page_number }}" class="btn btn-lg submitBtn"> NEXT &raquo;</a></li>
 
         {% endif %}
     </ul>

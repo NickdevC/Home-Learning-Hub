@@ -80,3 +80,9 @@ h2 {
     padding: 1rem;
     margin: 1rem;
 }
+
+#appointment-comment {
+    background-color: white;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
