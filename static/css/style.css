@@ -100,6 +100,7 @@ h2 {
     border-color: rgb(52, 204, 153);
     padding: 1rem;
     margin: 1rem;
+    box-shadow: -5px 5px 5px rgb(220, 221, 222)
 }
 
 #appointment-comment {
