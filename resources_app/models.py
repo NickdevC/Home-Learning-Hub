@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
+# Custom choices
 SUBJECTS = (
     ('0', 'English'),
     ('1', 'Maths'),
@@ -13,6 +14,7 @@ SUBJECTS = (
 )
 
 
+# Resource class for admins to upload a resource to library
 class Resource(models.Model):
     resource_name = models.CharField(max_length=80)
     subject = models.CharField(

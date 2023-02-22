@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.urls import reverse
 
 
-# Render all resources for unauthenticated user
+# Render resources for all users
 class DisplayResource(generic.ListView):
     model = Resource
     queryset = Resource.objects.all().order_by('-created_on')
@@ -15,7 +15,7 @@ class DisplayResource(generic.ListView):
     paginate_by = 9
 
 
-# Allow authenticated user to upload resources and display them
+# Allow admin to upload resources and display them
 def uploadResource(request):
     form = ResourceForm()
     if request.method == 'POST':
