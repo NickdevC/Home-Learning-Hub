@@ -1,10 +1,13 @@
 /*----------- Global settings ------------*/
-
-
-/*----------- Headers --------------------*/
 h1, h2 {
     font-family: 'Schoolbell', cursive;
 }
+
+h3, h4, p {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*----------- Headers --------------------*/
 
 h1 {
     font-size: 3rem;
@@ -60,9 +63,6 @@ h2 {
     background-color: rgb(30, 176, 127);
 }
 
-/* .active {
-    color: black;
-} */
 
 
 /*----------- Index page --------------*/
@@ -71,18 +71,26 @@ h2 {
 }
 
 .submitBtn {
-    color: rgb(30, 176, 127);
-    background-color: antiquewhite;
+    color: white;
+    background-color: rgb(30, 176, 127);
     border-radius: 20px;
     box-shadow: -5px 5px rgb(80, 78, 78);
 }
 
 .submitBtn:hover {
-    color: rgb(130, 234, 199);
-    background-color: rgb(30, 176, 127);
+    color: rgb(30, 176, 127);
+    background-color: antiquewhite;
     transform: translateY(-5px);
 }
 
+.fa-arrow-down {
+    color: rgb(30, 176, 127);
+}
+
+.line-break {
+    width: 80%;
+    margin: auto;
+}
 
 /*----------- Appointments page ------*/
 .appointment-card {
@@ -103,3 +111,11 @@ h2 {
 .content-card {
     box-shadow: -5px 5px 5px rgb(220, 221, 222);
 }
+
+/*----------- Resources page --------*/
+.resource-name {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+

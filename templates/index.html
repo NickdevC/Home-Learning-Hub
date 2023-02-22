@@ -11,18 +11,20 @@
                 height="500" loading="lazy">
         </div>
         <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3">Welcome to The Learning Hub!</h1>
+            <h1 class="display-5">Welcome to The Learning Hub!</h1>
             <p class="lead">Here we hope to grow parent-teacher connections by allowing swift,
-                hassel-free communication and an online library full of resources for you to use
-                at home.<br>To book an appointment fill in the form below<i class="fa-solid fa-arrow-down"></i></p>
+                hassel-free communication via our appointment booking system. You will also find our extensive
+                resource library will support you and your child by providing resources that have been 'hand-picked'
+                by your child's school.
+            </p>
+            <p class="lead"><i class="fa-solid fa-arrow-down"></i> Scroll down to book an appointment with your child's teacher <i class="fa-solid fa-arrow-down"></i></p>
             <div class="d-grid gap-2 d-md-flex justify-content-center">
-                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+                <a href="{% url 'resources' %}" class="btn btn-signup btn-lg submitBtn">Want some resources?</a>
             </div>
         </div>
     </div>
 </div>
-<hr>
+<hr class="line-break">
 <div class="container-fluid px-1 py-5 mx-auto">
     <div class="row d-flex justify-content-center">
         <div class="col-xl-5 col-lg-5 col-md-9 col-11 text-center">
