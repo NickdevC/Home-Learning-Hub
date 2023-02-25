@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
+from django.utils import timezone
 from cloudinary.models import CloudinaryField
 
 # Custom choices
@@ -23,17 +25,23 @@ TEACHERS = (
 )
 
 
+# Date validator to stop past dates being selected
+def validate_date(date):
+    if date < timezone.now().date():
+        raise ValidationError("Date cannot be in the past")
+
+
 # Appointments class for users to book an appointment slot
 class Appointment(models.Model):
     parent_name = models.CharField(max_length=80)
     child_name = models.CharField(max_length=80)
     teacher_name = models.CharField(
         max_length=80, choices=TEACHERS, default='0')
-    date = models.DateField()
+    date = models.DateField(validators=[validate_date])
     time = models.CharField(
         max_length=50, choices=APPOINTMENT_TIMES, default='0')
     comment = models.TextField(default=None)
-  
+
     class Meta:
         unique_together = ["teacher_name", "date", "time"]
 
