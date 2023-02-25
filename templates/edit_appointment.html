@@ -10,6 +10,7 @@
 <!-- Container and form -->
 <div class="container-fluid">
     <div class="row">
+        {% if user.is_authenticated %}
         <div class="row m-2 row d-flex justify-content-center">
             <div class="col-md-6 mb-4 text-center appointment-card content-card">
                 <!-- Form for editing the appointment model -->
@@ -20,6 +21,7 @@
                 </form>
             </div>
         </div>
+        {% endif %}
     </div>
 </div>
 
