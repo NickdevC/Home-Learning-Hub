@@ -22,7 +22,7 @@ With the Home Learning Hub, my goal has been to create an online learning platfo
 
 # User Experience
 
-## Objective of Project:
+## Objectives of the Project:
 
 1. To produce the **MVP** (minimum viable product), that allows `users` (parents) to interact with `admins` (school administration) by booking consultation appointments and accessing a 'resource library' populated by the child's school.
 2. To enable `users` to access the booking process and the resource library with ease and without the requirement of supplying credentials.
@@ -32,7 +32,7 @@ With the Home Learning Hub, my goal has been to create an online learning platfo
 
 ## Target Audience
 
-The main target audiences for the site are school administrators (who can provide access to teachers) and parents. The website needed to be functional for both of these user groups and their different needs.
+The main target audiences for the site are `school administrators` (who can provide access to teachers) and `parents`. The website needed to be functional for both of these user groups and their different needs.
 
 ### Parents (users) needs:
 - **Simple design** - focussing on being a welcoming space whilst not detracting from the main purpose of the site.
@@ -46,7 +46,7 @@ The main target audiences for the site are school administrators (who can provid
 
 ## Functionality Requirements
 
-### Anauthorised (`User`) Access
+### Unauthorised (`User`) Access
 
 | User Story Link | Requirement |
 | ------------- | -------- |
@@ -57,4 +57,39 @@ The main target audiences for the site are school administrators (who can provid
 | [#5](https://github.com/NickdevC/Home-Learning-Hub/issues/24#issue-1587496408) | I receive confirmation feedback when submitting the appointment form to ensure my confidence in it's delivery |
 | [#5](https://github.com/NickdevC/Home-Learning-Hub/issues/29#issue-1599713517) | I am challenged when inputing incorrect information into the appointment form and are given clear directions on how to remedy the fault |
 | [#6](https://github.com/NickdevC/Home-Learning-Hub/issues/11#issue-1562295415) | I can access a 'resources library', displaying free resources to support my child's learning |
+| [#7](https://github.com/NickdevC/Home-Learning-Hub/issues/34#issue-1599961263) | I can download a resource and have the file open as a pdf file in a seperate tab |
 
+
+### Authorised (`Admin`) Access
+
+#### Note regarding security: 
+*Schools will have strict GDPR regulations in place to ensure the sharing and processing of data is safe and monitored. Where data is accessed by `Admins` assume that the school's policy is agreed by all staff who have access. Any user story item that requires this consideration has been flagged with a `security` tag.* 
+
+| User Story Link | Requirement |
+| ------------- | -------- |
+| [#1]((https://github.com/NickdevC/Home-Learning-Hub/issues/1#issue-1562209793)) | I am able to access the landing page and easily access a login page link |
+| [#2](https://github.com/NickdevC/Home-Learning-Hub/issues/2#issue-1562233203) | With a link from a `superuser`, I can access a signup page and register my details to create an account |
+| [#3](https://github.com/NickdevC/Home-Learning-Hub/issues/4#issue-1562252150) | I am able to navigate to a login page where I can input my details and successfully login to the site |
+| [#4](https://github.com/NickdevC/Home-Learning-Hub/issues/4#issue-1562252150) | On successfully logging in, I am redirected to the homepage where added accessibility is now visible on the nav bar |
+| [#5](https://github.com/NickdevC/Home-Learning-Hub/issues/5#issue-1562258527) | I am able to logout of my account in order to maintain security on my system |
+| [#6](https://github.com/NickdevC/Home-Learning-Hub/issues/5#issue-1562258527) | I am presented with a modal message to add an extra level of defensive programming. I must confirm my logout process before being returned to the landing page |
+| [#7](https://github.com/NickdevC/Home-Learning-Hub/issues/23#issue-1574501441) | I can access an 'Appointments' page, where all booked appointments are displayed `security` |
+| [#8](https://github.com/NickdevC/Home-Learning-Hub/issues/7#issue-1562279581) | I can edit individual appointment bookings, changing any of the fields entered by the user `security` |
+| [#9](https://github.com/NickdevC/Home-Learning-Hub/issues/8#issue-1562284295) | I can permanently delete individual appointment bookings from the 'Appointments' page |
+| [#10](https://github.com/NickdevC/Home-Learning-Hub/issues/8#issue-1562284295) | On selecting to delete an appointment booking, I am faced with an added layer of defensive programming and must confirm the process through a modal popup message |
+| [#11]() | 
+
+
+### Specific `Super Admin` Access
+
+| User Story Link | Requirement |
+| ----------- | -------- |
+| [#1](https://github.com/NickdevC/Home-Learning-Hub/issues/13#issue-1562306829) | I can view all *booked appointments*, am able to edit these entries, and can use the data to monitor trends |
+| [#2](https://github.com/NickdevC/Home-Learning-Hub/issues/35#issue-1599969836) | I can view all *uploaded reosurces*, am able to edit these entries, and can use the data to monitor trends |
+
+### Developer Tasks 
+Here I have documented some of the tasks I created as part of my agile approach to development. These tasks helped to fulfill the user stories listed above and demonstrate how the process was constant dialogue between the user/admin's needs and the site's functionality in practise.
+
+| Dev Task Link | Details |
+| ----------- | ------- |
+| [#1]() |
