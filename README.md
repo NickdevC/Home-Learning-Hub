@@ -6,7 +6,6 @@
 
 *  [Purpose](#purpose)
 *  [User Experience](#user-experience)
-*  [Features](#features)
 *  [Design](#design)
 *  [Technologies Used](#technologies-used)
 *  [Testing](#testing)
@@ -46,10 +45,12 @@ The main target audiences for the site are `school administrators` (who can prov
 
 ## Functionality Requirements
 
+All user stories and tasks related to the functionality of the site can be viewed in this project's [kanban board](https://github.com/users/NickdevC/projects/4), where all issues are clearly labelled and categorised to give context. The majority of these are displayed below, seperated into the different user types: `User`, `Admin`, and `Super Admin`.
+
 ### Unauthorised (`User`) Access
 
 | User Story Link | Requirement |
-| ------------- | -------- |
+| ----- | -------- |
 | [#1](https://github.com/NickdevC/Home-Learning-Hub/issues/1#issue-1562209793) | I am able to easily recongise and understand the purpose of the site from the immediate information on the landing page |
 | [#2](https://github.com/NickdevC/Home-Learning-Hub/issues/1#issue-1562209793) | I am able to easily navigate across the site, following clear signposting and using the minimal amount of clicks |
 | [#3](https://github.com/NickdevC/Home-Learning-Hub/issues/1#issue-1562209793) | I am able to identify clear branding and consistency in design, providing me with confidence in site's purpose |
@@ -66,8 +67,8 @@ The main target audiences for the site are `school administrators` (who can prov
 *Schools will have strict GDPR regulations in place to ensure the sharing and processing of data is safe and monitored. Where data is accessed by `Admins` assume that the school's policy is agreed by all staff who have access. Any user story item that requires this consideration has been flagged with a `security` tag.* 
 
 | User Story Link | Requirement |
-| ------------- | -------- |
-| [#1]((https://github.com/NickdevC/Home-Learning-Hub/issues/1#issue-1562209793)) | I am able to access the landing page and easily access a login page link |
+| ----- | -------- |
+| [#1](https://github.com/NickdevC/Home-Learning-Hub/issues/1#issue-1562209793) | I am able to access the landing page and easily access a login page link |
 | [#2](https://github.com/NickdevC/Home-Learning-Hub/issues/2#issue-1562233203) | With a link from a `superuser`, I can access a signup page and register my details to create an account |
 | [#3](https://github.com/NickdevC/Home-Learning-Hub/issues/4#issue-1562252150) | I am able to navigate to a login page where I can input my details and successfully login to the site |
 | [#4](https://github.com/NickdevC/Home-Learning-Hub/issues/4#issue-1562252150) | On successfully logging in, I am redirected to the homepage where added accessibility is now visible on the nav bar |
@@ -83,13 +84,107 @@ The main target audiences for the site are `school administrators` (who can prov
 ### Specific `Super Admin` Access
 
 | User Story Link | Requirement |
-| ----------- | -------- |
+| ----- | -------- |
 | [#1](https://github.com/NickdevC/Home-Learning-Hub/issues/13#issue-1562306829) | I can view all *booked appointments*, am able to edit these entries, and can use the data to monitor trends |
 | [#2](https://github.com/NickdevC/Home-Learning-Hub/issues/35#issue-1599969836) | I can view all *uploaded reosurces*, am able to edit these entries, and can use the data to monitor trends |
 
 ### Developer Tasks 
-Here I have documented some of the tasks I created as part of my agile approach to development. These tasks helped to fulfill the user stories listed above and demonstrate how the process was constant dialogue between the user/admin's needs and the site's functionality in practise.
+*Here I have documented *some* of the tasks I created to demonstrate my agile approach to development. These tasks helped to fulfill the user stories listed above and demonstrate how the process was constant dialogue between the user/admin's needs and the site's functionality in practise.*
 
 | Dev Task Link | Details |
-| ----------- | ------- |
-| [#1]() |
+| ----- | ------- |
+| [#1](https://github.com/NickdevC/Home-Learning-Hub/issues/15#issue-1562317742) | Install Django and supporting libraries |
+| [#2](https://github.com/NickdevC/Home-Learning-Hub/issues/16#issue-1562321869) | Install Bootstrap V5 for added responsiveness and functionality |
+| [#3](https://github.com/NickdevC/Home-Learning-Hub/issues/19#issue-1564048600) | Create base.html template using Bootstrap syntax and including boilerplate |
+| [#4](https://github.com/NickdevC/Home-Learning-Hub/issues/18#issue-1562326734) | Create an 'Appointment' model including all required fields for a user's details |
+| [#5](https://github.com/NickdevC/Home-Learning-Hub/issues/27#issue-1591558422) | Create a new 'resources_app' within Django to setup the resources page structure and functionality |
+
+
+# Design
+
+## Agile Approach
+
+I followed the 'agile' approach to developing my The Home Learning Hub, using the content from Code Institute's course content to support me. Initially, I used the Github 'issues' feature to create my `Must Have` features (displayed as user stories). Once these were established, and with consideration to my project's timetline, I considered and added a number of `Could Have` features that were not essential for the **MVP**. In addition, I created a [kanban board](https://github.com/users/NickdevC/projects/4) which I used throughout the development process. As I began planning out my sprints, I realised that I needed to include an extra column in my kanban board for styling, which meant that I could prioritise the functionality and database structuring *before* I focussed attention on styling the front-end elements (this could happen at the end). In addition, whilst working through sprints, and ensuring I met the criteria for various user stories, I found it useful to create 'Tasks' to detail specifc, more significant jobs.
+
+Whilst the agile approach itself is more commonly based in team environments, with multiple people working on a project, this was hard to achieve as my project was my sole responsibility. To attempt to combat this 'coding in isolation', I reached out to a number of other people within the community to collaborate by: reviewing code, discussing bugs, problem solving user features and giving regular progress updates. The details of these collaborators can be found in the [Acknowledgements](#acknowledgements) section at the bottom of this readme.
+
+## Technical Design
+
+### Data Structure (models)
+
+In planning my data structure, I used [Lucidchart](https://www.lucidchart.com/pages/) to help visualise the models and understand the various field types necessary for each data entry. My project consists of two main models (`Appointment` and `Resource`), with each requiring some additional `CHOICE` fields. In addition to this, the `Resource` model required a specific `CloudinaryField` to access my remote-hosted media for the site, as well as providing cloud storage for any files uploaded through the front-end.
+
+<img src="static/images/models.png" width="auto">
+
+### Django App Structure
+
+The Home Learning Hub app is seperated into two apps, each serving a different purpose: 'booking_app' and 'resources_app'. These apps are similar in structure but it was necessary to seperate them so that their individual functions could be isolated and accessed more readily for future maintence or duplication in other projects.
+
+<img src="static/images/file_structure.png" width="auto">
+
+## UI Design
+
+### Wireframes
+
+### Colour
+
+### Typography
+
+### Features
+
+
+# Technologies Used
+
+## Languages
+* [HTML](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) - The markup language used to create the structure of the site.
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Used to style elements of the site.
+* [JavaScript](https://www.javascript.com/) - Used to add interactivity to elements of the site.
+* [Python](https://www.python.org/) - Primary language used to develop the back-end portions of the site.
+
+## Frameworks/libraries
+* [Django](https://www.djangoproject.com/) - Python web framework providing pre-built syntax structures and providing essential 'app' file structures.
+  - [Django AllAuth](https://django-allauth.readthedocs.io/en/latest/) - Integrated set of Django applications addressing authentication, registration, and account management.
+  - [Django Summernote](https://github.com/summernote/django-summernote) - A simple WYSIWYG editor for use with Django.
+  - [Django CrispyForms](https://django-crispy-forms.readthedocs.io/en/latest/) - Gives added control and choices with regards to the rendering behavior of Django forms.
+  - [Django Active-Link](https://django-active-link.readthedocs.io/en/latest/readme.html) - A simple way to highlight active links in a Django app.
+
+## Databases
+* [ElephantSQL](https://www.elephantsql.com/) - Database used to store all models and user-generated data.
+
+## Other Tools
+* [Heroku](https://www.heroku.com/) - A cloud platform used for hosting the app.
+* [Github](https://github.com/github) - Used to host my app's source code. Also provided the tools for creating *issues* and a *kanban board* for my agile approach to development.
+* [Git](https://git-scm.com/) - Git is an open source distributed version control system used to manage all code.
+* [Pip3](https://pypi.org/project/pip/) - The package installer for Python, used to install packages from the Python Package Index and other indexes.
+* [Gunicorn](https://gunicorn.org/) - Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX (translates HTTP requests for Python to understand).
+* [Pyscopg2](https://pypi.org/project/psycopg2/) - PostgreSQL database adapter for Python.
+* [VScode](https://code.visualstudio.com/) - A code editor redefined and optimized for building and debugging modern web and cloud applications. 
+* [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - A set of web developer tools built directly into the Google Chrome browser. Used to help debug my code during development.
+* [Google Fonts](https://fonts.google.com/) - A font catalogue, providing a variety of free custom fonts.
+* [Font Awesome](https://fontawesome.com/) - An online icon library, used to provide small icons for social links and navigation functions.
+* [Balsamiq](https://balsamiq.com/wireframes/) - Used to create wireframes of the site during planning stages.
+* [Lucidchart](https://www.lucidchart.com/pages/) - Used to create and display model structures.
+
+
+
+# Testing
+
+## User Testing
+
+## Admin Testing
+
+## Super Admin Testing
+
+## Performance Testing
+
+## Bugs
+
+
+# Deployment
+
+# Credits
+
+## Websites
+
+## Acknowledgements
+
