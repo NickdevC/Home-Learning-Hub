@@ -104,6 +104,9 @@ Here I have documented *some* of the tasks I created to demonstrate my agile app
 
 ## Agile Approach
 
+I followed the 'agile' approach to developing my The Home Learning Hub, using the content from Code Institute's course content to support me. Initially, I used the Github 'issues' feature to create my `Must Have` features (displayed as user stories). Once these were established, and with consideration to my project's timetline, I considered and added a number of `Could Have` features that were not essential for the **MVP**. In addition, I created a [kanban board](https://github.com/users/NickdevC/projects/4) which I used throughout the development process. As I began planning out my sprints, I realised that I needed to include an extra column in my kanban board for styling, which meant that I could prioritise the functionality and database structuring *before* I focussed attention on styling the front-end elements (this could happen at the end). In addition, whilst working through sprints, and ensuring I met the criteria for various user stories, I found it useful to create 'Tasks' to detail specifc, more significant jobs.
+
+Whilst the agile approach itself is more commonly based in team environments, with multiple people working on a project, this was hard to achieve as my project was my sole responsibility. To attempt to combat this 'coding in isolation', I reached out to a number of other people within the community to collaborate by: reviewing code, discussing bugs, problem solving user features and giving regular progress updates. The details of these collaborators can be found in the [Acknowledgements](#acknowledgements) section at the bottom of this readme.
 
 ## Technical Design
 
@@ -133,34 +136,34 @@ The Home Learning Hub app is seperated into two apps, each serving a different p
 # Technologies Used
 
 ## Languages
-[HTML](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) - The markup language used to create the structure of the site.
-[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Used to style elements of the site.
-[JavaScript](https://www.javascript.com/) - Used to add interactivity to elements of the site.
-[Python](https://www.python.org/) - Primary language used to develop the back-end portions of the site.
+* [HTML](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) - The markup language used to create the structure of the site.
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Used to style elements of the site.
+* [JavaScript](https://www.javascript.com/) - Used to add interactivity to elements of the site.
+* [Python](https://www.python.org/) - Primary language used to develop the back-end portions of the site.
 
 ## Frameworks/libraries
-[Django](https://www.djangoproject.com/) - Python web framework providing pre-built syntax structures and providing essential 'app' file structures.
+* [Django](https://www.djangoproject.com/) - Python web framework providing pre-built syntax structures and providing essential 'app' file structures.
   - [Django AllAuth](https://django-allauth.readthedocs.io/en/latest/) - Integrated set of Django applications addressing authentication, registration, and account management.
   - [Django Summernote](https://github.com/summernote/django-summernote) - A simple WYSIWYG editor for use with Django.
   - [Django CrispyForms](https://django-crispy-forms.readthedocs.io/en/latest/) - Gives added control and choices with regards to the rendering behavior of Django forms.
   - [Django Active-Link](https://django-active-link.readthedocs.io/en/latest/readme.html) - A simple way to highlight active links in a Django app.
 
 ## Databases
-[ElephantSQL](https://www.elephantsql.com/) - Database used to store all models and user-generated data.
+* [ElephantSQL](https://www.elephantsql.com/) - Database used to store all models and user-generated data.
 
 ## Other Tools
-[Heroku](https://www.heroku.com/) - A cloud platform used for hosting the app.
-[Github](https://github.com/github) - Used to host my app's source code. Also provided the tools for creating *issues* and a *kanban board* for my agile approach to development.
-[Git](https://git-scm.com/) - Git is an open source distributed version control system used to manage all code.
-[Pip3](https://pypi.org/project/pip/) - The package installer for Python, used to install packages from the Python Package Index and other indexes.
-[Gunicorn](https://gunicorn.org/) - Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX (translates HTTP requests for Python to understand).
-[Pyscopg2](https://pypi.org/project/psycopg2/) - PostgreSQL database adapter for Python.
-[VScode](https://code.visualstudio.com/) - A code editor redefined and optimized for building and debugging modern web and cloud applications. 
-[Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - A set of web developer tools built directly into the Google Chrome browser. Used to help debug my code during development.
-[Google Fonts](https://fonts.google.com/) - A font catalogue, providing a variety of free custom fonts.
-[Font Awesome](https://fontawesome.com/) - An online icon library, used to provide small icons for social links and navigation functions.
-[Balsamiq](https://balsamiq.com/wireframes/) - Used to create wireframes of the site during planning stages.
-[Lucidchart](https://www.lucidchart.com/pages/) - Used to create and display model structures.
+* [Heroku](https://www.heroku.com/) - A cloud platform used for hosting the app.
+* [Github](https://github.com/github) - Used to host my app's source code. Also provided the tools for creating *issues* and a *kanban board* for my agile approach to development.
+* [Git](https://git-scm.com/) - Git is an open source distributed version control system used to manage all code.
+* [Pip3](https://pypi.org/project/pip/) - The package installer for Python, used to install packages from the Python Package Index and other indexes.
+* [Gunicorn](https://gunicorn.org/) - Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX (translates HTTP requests for Python to understand).
+* [Pyscopg2](https://pypi.org/project/psycopg2/) - PostgreSQL database adapter for Python.
+* [VScode](https://code.visualstudio.com/) - A code editor redefined and optimized for building and debugging modern web and cloud applications. 
+* [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - A set of web developer tools built directly into the Google Chrome browser. Used to help debug my code during development.
+* [Google Fonts](https://fonts.google.com/) - A font catalogue, providing a variety of free custom fonts.
+* [Font Awesome](https://fontawesome.com/) - An online icon library, used to provide small icons for social links and navigation functions.
+* [Balsamiq](https://balsamiq.com/wireframes/) - Used to create wireframes of the site during planning stages.
+* [Lucidchart](https://www.lucidchart.com/pages/) - Used to create and display model structures.
 
 
 
@@ -174,6 +177,8 @@ The Home Learning Hub app is seperated into two apps, each serving a different p
 
 ## Performance Testing
 
+## Bugs
+
 
 # Deployment
 
@@ -181,5 +186,5 @@ The Home Learning Hub app is seperated into two apps, each serving a different p
 
 ## Websites
 
-## Personal Acknowledgements
+## Acknowledgements
 
