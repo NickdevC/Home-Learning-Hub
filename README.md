@@ -2,7 +2,7 @@
 
 <img src="static/images/responsive.png" width="auto">
 
-## Index - Table of Contents
+## Contents
 
 *  [Purpose](#purpose)
 *  [User Experience](#user-experience)
@@ -99,6 +99,7 @@ All user stories and tasks related to the functionality of the site can be viewe
 | [#4](https://github.com/NickdevC/Home-Learning-Hub/issues/18#issue-1562326734) | Create an 'Appointment' model including all required fields for a user's details |
 | [#5](https://github.com/NickdevC/Home-Learning-Hub/issues/27#issue-1591558422) | Create a new 'resources_app' within Django to setup the resources page structure and functionality |
 
+[Return to contents](#contents)
 
 # Design
 
@@ -107,6 +108,8 @@ All user stories and tasks related to the functionality of the site can be viewe
 I followed the 'agile' approach to developing my The Home Learning Hub, using the content from Code Institute's course content to support me. Initially, I used the Github 'issues' feature to create my `Must Have` features (displayed as user stories). Once these were established, and with consideration to my project's timetline, I considered and added a number of `Could Have` features that were not essential for the **MVP**. In addition, I created a [kanban board](https://github.com/users/NickdevC/projects/4) which I used throughout the development process. As I began planning out my sprints, I realised that I needed to include an extra column in my kanban board for styling, which meant that I could prioritise the functionality and database structuring *before* I focussed attention on styling the front-end elements (this could happen at the end). In addition, whilst working through sprints, and ensuring I met the criteria for various user stories, I found it useful to create 'Tasks' to detail specifc, more significant jobs.
 
 Whilst the agile approach itself is more commonly based in team environments, with multiple people working on a project, this was hard to achieve as my project was my sole responsibility. To attempt to combat this 'coding in isolation', I reached out to a number of other people within the community to collaborate by: reviewing code, discussing bugs, problem solving user features and giving regular progress updates. The details of these collaborators can be found in the [Acknowledgements](#acknowledgements) section at the bottom of this readme.
+
+[Return to contents](#contents)
 
 ## Technical Design
 
@@ -121,6 +124,8 @@ In planning my data structure, I used [Lucidchart](https://www.lucidchart.com/pa
 The Home Learning Hub app is seperated into two apps, each serving a different purpose: 'booking_app' and 'resources_app'. These apps are similar in structure but it was necessary to seperate them so that their individual functions could be isolated and accessed more readily for future maintence or duplication in other projects.
 
 <img src="static/images/file_structure.png" width="auto">
+
+[Return to contents](#contents)
 
 ## UI Design
 
@@ -169,6 +174,7 @@ The Home Learning Hub app is seperated into two apps, each serving a different p
 
 <img src="static/images/roboto-font.png" width="auto">
 
+[Return to contents](#contents)
 
 ### Features 
 
@@ -270,6 +276,8 @@ The Home Learning Hub app is seperated into two apps, each serving a different p
 
 <img src="static/images/screenshots/upload-resource-form.png" width="auto">
 
+[Return to contents](#contents)
+
 # Technologies Used 
 
 ## Languages
@@ -303,7 +311,7 @@ The Home Learning Hub app is seperated into two apps, each serving a different p
 * [Balsamiq](https://balsamiq.com/wireframes/) - Used to create wireframes of the site during planning stages.
 * [Lucidchart](https://www.lucidchart.com/pages/) - Used to create and display model structures.
 
-
+[Return to contents](#contents)
 
 # Testing
 
@@ -328,6 +336,7 @@ The Home Learning Hub app is seperated into two apps, each serving a different p
 | [#6](https://github.com/NickdevC/Home-Learning-Hub/issues/31#issue-1599718423) | When uploading a file through the admin panel, the file is visible in Cloudinary storage but does not appear to the user on the front-end | I needed to add '.url' to the href in the 'Resource Library' template |
 | [#7](https://github.com/NickdevC/Home-Learning-Hub/issues/32#issue-1599959327) | When uploading a file from the front-end, the files in question would not appear in Cloudinary storage | I needed to pass ‘request.FILES’ to the ResourceForm [Django Project](https://docs.djangoproject.com/en/4.1/topics/http/file-uploads/) |
 
+[Return to contents](#contents)
 
 # Deployment
 
@@ -335,5 +344,19 @@ The Home Learning Hub app is seperated into two apps, each serving a different p
 
 ## Websites
 
+* [Pixabay](https://pixabay.com/users/elf-moondance-19728901/) - images by artist Elf-Moondance
+* [Getbootstrap](https://getbootstrap.com/docs/5.0/examples/heroes/) - Examples of hero images/banners in Bootstrap5 provided structure for my hero banners
+* [Django Active-Link](https://django-active-link.readthedocs.io/en/latest/readme.html) - Provided me with documentation on how to implement 'active-link' into my project
+* [Stack Overflow](https://stackoverflow.com/questions/49091870/django-template-force-choices-on-field-and-print-display-value-with-get-foo-dis) - Supported me in understanding the 'get_FOO_display' syntax
+* [Stack Overflow](https://stackoverflow.com/questions/25170071/how-do-i-use-unique-together-in-django ) - Supported me in understandin the 'unique_together' attribute
+* [Django Project](https://docs.djangoproject.com/en/4.1/topics/http/file-uploads/) - I learnt how to upload files using the documentation provided by Django Project
+* [Django Project](https://docs.djangoproject.com/en/2.2/ref/validators/) - I learnt how validators work in Django using the documentation provided by Django Project
+
 ## Acknowledgements
+
+* A special mention to my mentor Martina Terlevic who has accomodated me along the way, supporting with queries 'on the fly' and providing invaluable guidance during project milestone meetings. 
+* I have enormous gratitude for the patience, and experience offered by tutor support members: Oisin, Rebecca and Martin. All three helped me work through problems systematically and those processes themselves taught me a great deal with regards to debugging and **reading** code.
+* I also want to thank [Chris.F](https://github.com/Chrisfaherty) and [Chris.B](https://github.com/Christoph33one) (fellow Code Institute students). By joining together and engaging in remote study sessions your conversation and input kept me on track and motivated to push myself with regards to the project. By regularly talking through our code, I'd like to think we replicated as much of the 'agile' process as we could!
+
+[Return to contents](#contents)
 
