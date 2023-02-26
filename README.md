@@ -1,8 +1,8 @@
-<h1 align="center">The Home Learning Hub</h1>
+<h1 align="center">The Learning Hub</h1>
 
 <img src="static/images/responsive.png" width="auto">
 
-## Index - Table of Contents
+## Contents
 
 *  [Purpose](#purpose)
 *  [User Experience](#user-experience)
@@ -16,7 +16,7 @@
 
 Working in schools, during the Covid19 pandemic, gave me a unique insight into the challenges that teachers, parents and pupils all faced with regards to remote learning. Whilst many companies were quick to meet the demands of schools, many of these products were focussed on satisfying larger audiences and were rarely bespoke for each individual school and their needs. These websites offered libraries of generic resources, but lacked a sense of community, professional dialogue, and the ability to rapidly change the resources on offer to suit pupils' needs. 
 
-With the Home Learning Hub, my goal has been to create an online learning platform which serves as a 'hub' for the school, parents and (as an extension) pupils of a specific school. It was clear from recent years that the profession has needed to rapidly adapt and re-evaluate how we can positivly affect change in pupil's lives, and that the process of 'home-learning' should not only be resigned to extreme circumstances, but instead be used as an on-going tool. My goal would be for The Home Learning Hub to not only support the education of pupils but also: enhance pupil wellbeing, provide efficient communication betwen school and home, boost parent confidence, and continue to instil a sense of 'school community'.
+With The Learning Hub, my goal has been to create an online learning platform which serves as a 'hub' for the school, parents and (as an extension) pupils of a specific school. It was clear from recent years that the profession has needed to rapidly adapt and re-evaluate how we can positivly affect change in pupil's lives, and that the process of 'home-learning' should not only be resigned to extreme circumstances, but instead be used as an on-going tool. My goal would be for The Home Learning Hub to not only support the education of pupils but also: enhance pupil wellbeing, provide efficient communication betwen school and home, boost parent confidence, and continue to instil a sense of 'school community'.
 
 
 # User Experience
@@ -99,6 +99,7 @@ All user stories and tasks related to the functionality of the site can be viewe
 | [#4](https://github.com/NickdevC/Home-Learning-Hub/issues/18#issue-1562326734) | Create an 'Appointment' model including all required fields for a user's details |
 | [#5](https://github.com/NickdevC/Home-Learning-Hub/issues/27#issue-1591558422) | Create a new 'resources_app' within Django to setup the resources page structure and functionality |
 
+[Return to contents](#contents)
 
 # Design
 
@@ -107,6 +108,8 @@ All user stories and tasks related to the functionality of the site can be viewe
 I followed the 'agile' approach to developing my The Home Learning Hub, using the content from Code Institute's course content to support me. Initially, I used the Github 'issues' feature to create my `Must Have` features (displayed as user stories). Once these were established, and with consideration to my project's timetline, I considered and added a number of `Could Have` features that were not essential for the **MVP**. In addition, I created a [kanban board](https://github.com/users/NickdevC/projects/4) which I used throughout the development process. As I began planning out my sprints, I realised that I needed to include an extra column in my kanban board for styling, which meant that I could prioritise the functionality and database structuring *before* I focussed attention on styling the front-end elements (this could happen at the end). In addition, whilst working through sprints, and ensuring I met the criteria for various user stories, I found it useful to create 'Tasks' to detail specifc, more significant jobs.
 
 Whilst the agile approach itself is more commonly based in team environments, with multiple people working on a project, this was hard to achieve as my project was my sole responsibility. To attempt to combat this 'coding in isolation', I reached out to a number of other people within the community to collaborate by: reviewing code, discussing bugs, problem solving user features and giving regular progress updates. The details of these collaborators can be found in the [Acknowledgements](#acknowledgements) section at the bottom of this readme.
+
+[Return to contents](#contents)
 
 ## Technical Design
 
@@ -118,22 +121,168 @@ In planning my data structure, I used [Lucidchart](https://www.lucidchart.com/pa
 
 ### Django App Structure
 
-The Home Learning Hub app is seperated into two apps, each serving a different purpose: 'booking_app' and 'resources_app'. These apps are similar in structure but it was necessary to seperate them so that their individual functions could be isolated and accessed more readily for future maintence or duplication in other projects.
+The Learning Hub app is seperated into two apps, each serving a different purpose: 'booking_app' and 'resources_app'. These apps are similar in structure but it was necessary to seperate them so that their individual functions could be isolated and accessed more readily for future maintence or duplication in other projects.
 
 <img src="static/images/file_structure.png" width="auto">
+
+[Return to contents](#contents)
 
 ## UI Design
 
 ### Wireframes
 
+#### Homepage
+
+<img src="static/images/wireframes/homepage.png" width="700">
+<img src="static/images/wireframes/homepage2.png" width="700">
+<img src="static/images/wireframes/homepage-mobile.png" width="200">
+
+#### Resource Library
+
+<img src="static/images/wireframes/resources.png" width="700">
+<img src="static/images/wireframes/resources2.png" width="700">
+<img src="static/images/wireframes/resources-mobile.png" width="200">
+
+#### Login
+
+<img src="static/images/wireframes/sign-in.png" width="700">
+
+#### Appointments
+
+<img src="static/images/wireframes/appointments.png" width="700">
+<img src="static/images/wireframes/appointments-mobile.png" width="200">
+
+#### Edit Appointments
+
+<img src="static/images/wireframes/edit-appointment.png" width="700">
+
+#### Upload Resource
+
+<img src="static/images/wireframes/upload-resource.png" width="700">
+
+
 ### Colour
+
+* I decided to keep the colour scheme very simple and focused on one particular shade of green. Across the website, I have slightly altered the tone of this one shade (for shadows, highlights and links), but have not moved away from the base colour. The reasoning behind this was to establish a very clear and identifiable brand. In addition, other colours were not necessary in promoting the main purposes of the site. The result is clean and welcoming to users.
+
+<img src="static/images/main-colour.png" width="auto">
+
 
 ### Typography
 
-### Features
+* In keeping with the themes of 'education' and 'school', I felt that the 'schoolbell' font was most appropriate for headings throughout the site. It is playful and, due to the simplicity of the site's design, it does not detract from the serious purpose of the site itself. By keeping headings consistently in this font, the brand identity is further strengthened.
 
+<img src="static/images/schoolbell-font.png" width="auto">
 
-# Technologies Used
+* 'Roboto' font was used for any remaining text as it is simple to read and is highly accessible when screen sizes are altered.
+
+<img src="static/images/roboto-font.png" width="auto">
+
+[Return to contents](#contents)
+
+### Features 
+
+#### Navbar (`user`)
+
+* The navbar includes simple branding, in the form of the website logo (situated at the upper-left-corner). It is fully responsive and reduces to a 'burger menu' when screen size is reduced. In order to maintain a simple level of playfulness (often synonymous with schools), I have added minor user feedback in the form of a small 'drop' effect on each navbar item. In addition to this, I have used [Django Active-Link](https://django-active-link.readthedocs.io/en/latest/readme.html) to ensure that the navbar items are highlighted when 'active'.
+
+<img src="static/images/screenshots/user-nav.png" width="auto">
+
+#### Navbar (`admin`)
+
+* The navbar for `admins` is much the same as `users`, with the addition of other authorised pages available to navigate to.
+
+<img src="static/images/screenshots/admin-nav.png" width="auto">
+
+#### Footer (`user` and `admin`)
+
+* The footer is a simple in it's design, following the same colour scheme as the rest of the site. I purposely did not add much styling to this as I wanted the main focus of the site to remain the **booking of appointments** and the **downloading of resources** for `users`. It includes simple social links to the developer, but could easily incorporate personalised social links for each individual school if the product became live.
+
+<img src="static/images/screenshots/footer.png" width="auto">
+
+#### Homepage (`user` and `admin`)
+
+* The hero banner of the homepage was designed to be minimal, so as to not detract from the clear purpose and functionality of the site, whilst also feeling uncomplicated and non-threatening to a new user. The simple cartoon imagery provides a welcome and warm feel, whilst the small amount of text helps explain the purpose of the site. There is also the addition of a **call to action** button, which encourages users to access the **resource library**, reducing the amount of navigation required from the user to reach their goals.
+
+<img src="static/images/screenshots/homepage-hero.png" width="auto">
+
+* The appointment form can be filled in by any visitor to the site, and you do not require a login to access it (whilst this may be something to change in the future for security purposes and to filter out unecessary communication, for now it fulfills the minimal requirements for the site). It allows the user to input all necessary fields to book an appointment with their child's teacher. A dropdown menu provides a list of `choices` for both the *teacher* and *time* options. In addition, there is a `date field` which allows the suer to pick a date for the appointment. I have ensured that the form cannot accept duplicate teacher/time/date slots, and will also prevent the user from booking a date in the past. See [bugs section](#bugs) for more details.
+
+* This user interaction also forms the first part of the `CRUD` design, that being the `CREATE` stage.
+
+<img src="static/images/screenshots/appointment-form.png" width="auto">
+
+#### Appointment Form Alerts (`user` and `admin`)
+
+* On successfully filling in the 'appointments form', the following alert message appears in order to give the user instant feedback and reassure them that the form has been recieved by the school. After 3 seconds, the alert disappears and the user is back on the homepage.
+
+<img src="static/images/screenshots/appointment-success.png" width="auto">
+
+* If the form is filled in using a date from the past, the following error alert message appears at the top of the page. This gives the user a clear indication of what fields to check before rectifying the issue. **The form is not submitted until the issue is resolved.**
+
+<img src="static/images/screenshots/past-date-alert.png" width="auto">
+
+* In addition, the `date field` displays the following error to make it even clearer to the user.
+
+<img src="static/images/screenshots/date-error.png" width="auto">
+
+* If the user enters a combination of teacher/date/time where another entry already exists within the database, the following alert appears at the top of the page. This prompts the user to change their selection before continuing. **The form is not submitted until the issue is resolved.**
+
+<img src="static/images/screenshots/duplicate-error.png" width="auto">
+
+#### Resource Library (`user`)
+
+* On entering the 'Resource Library' page, `users` are met with another hero banner, designed to present a welcoming feel and promote accessibility. The image is in-line with the homepage in terms of branding, and the accompanying text helps to explain the purpose and role of the page itself.
+
+<img src="static/images/screenshots/resources-hero.png" width="auto">
+
+* The 'Resource Library' page displays all uploaded resources for `users` to access and download (opening in a seperate tab). These resources appear in small, simple cards, displaying only the most vital information. Pagination is in place to ensure that the screen does not become overcrowded with further resources being added. 
+
+<img src="static/images/screenshots/resource-cards.png" width="auto">
+
+#### Login (`user` and `admin`)
+
+* This page is open to all users, however only `admins` have the ability to supply credentials here and open up other parts of the site. There is a text prompt which instructs users to contact their school administrator for login details (please see next 'Sign Up' section).
+
+<img src="static/images/screenshots/sign-in-form.png" width="auto">
+
+#### Sign Up (`admin`)
+
+**Important! This page is a hidden template, and would be issued by the main school administrator (`Super User`) for other administration staff (`admins`) to access.** [Please find the page here]()
+
+* This sign up page displays a clear, uncomplicated sign up form, supported by [Django's AllAuth applications](https://django-allauth.readthedocs.io/en/latest/). It allows school administration staff to sign up and create secure accounts to access restricted pages within the site.
+
+<img src="static/images/screenshots/sign-up-form.png" width="auto">
+
+#### Appointments (`admin`)
+
+* On successfully signing in, `admins` have access to the 'Appointments' page, where they can manage the appointments made by `users`. Here, the details of each individual appointment are clearly displayed in small cards. Again, with functionality in mind, the level of styling is minimal here as any more refinement may detract from the sole purpose of the app, and the goals of the `admins`. Each appointment also contains buttons for 'Edit' and 'Delete'. Pagination is in place to ensure that the screen does not become overcrowded with further appointments being added.
+
+* This user interaction also forms the second part of the `CRUD` design, that being the `READ` stage.
+
+<img src="static/images/screenshots/appointment-cards.png" width="auto">
+
+* On selecting 'Edit', `admins` are taken to the 'edit_appointment' template and can update any of the details for the appointment before saving these changes and being returned to the 'Appointments' page.
+
+* This user interaction also forms the third part of the `CRUD` design, that being the `UPDATE` stage.
+
+<img src="static/images/screenshots/edit-appointment-form.png" width="auto">
+
+* On selecting 'Delete', `admins` are presented with a modal, used as an element of defensive programming, in order to confirm the action before permanently deleting the appointment from both the front-end view and the database. On confirming the deletion, they are returned back to the 'Appointments' page.
+
+* This user interaction also forms the fourth part of the `CRUD` design, that being the `DELETE` stage.
+
+<img src="static/images/screenshots/delete-modal.png" width="auto">
+
+#### Upload Resources (`admin`)
+
+* The 'Upload Resources' page provides `admins` with a form which allows them to upload resources for `users` to use at home to support their child's learning. Here you can specify the name of the resource, the subject and with the `CloudinaryField`, all uploaded resources are stored in the [Cloudinary database](https://cloudinary.com/), and then rendered in the 'Resource Library' page for all `users` to access. 
+
+<img src="static/images/screenshots/upload-resource-form.png" width="auto">
+
+[Return to contents](#contents)
+
+# Technologies Used 
 
 ## Languages
 * [HTML](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) - The markup language used to create the structure of the site.
@@ -147,9 +296,11 @@ The Home Learning Hub app is seperated into two apps, each serving a different p
   - [Django Summernote](https://github.com/summernote/django-summernote) - A simple WYSIWYG editor for use with Django.
   - [Django CrispyForms](https://django-crispy-forms.readthedocs.io/en/latest/) - Gives added control and choices with regards to the rendering behavior of Django forms.
   - [Django Active-Link](https://django-active-link.readthedocs.io/en/latest/readme.html) - A simple way to highlight active links in a Django app.
+* [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) - CSS web framework providing in-built classes to support design and responsiveness.
 
 ## Databases
 * [ElephantSQL](https://www.elephantsql.com/) - Database used to store all models and user-generated data.
+* [Cloudinary](https://cloudinary.com/) - Cloud database for storing images and uploaded files from the front-end of my app.
 
 ## Other Tools
 * [Heroku](https://www.heroku.com/) - A cloud platform used for hosting the app.
@@ -165,20 +316,72 @@ The Home Learning Hub app is seperated into two apps, each serving a different p
 * [Balsamiq](https://balsamiq.com/wireframes/) - Used to create wireframes of the site during planning stages.
 * [Lucidchart](https://www.lucidchart.com/pages/) - Used to create and display model structures.
 
-
+[Return to contents](#contents)
 
 # Testing
 
 ## User Testing
 
+| Feature | User Action| Expected Outcome | Pass? |
+| ----- | -------- | ------- | ------- |
+| Homepage | View the site's purpose | Users should be presented with text and imagery to help explain the purposes of the site | PASS |
+| Homepage | Navigate across the site's pages | Users should be able to see a clear navigation menu and recieve feedback on clicking links | PASS |
+| Homepage | Use the site's logo for home navigation | Users should be able to click the site's logo to return to the homepage from any other location | PASS |
+| Homepage | Navigate to 'Resource Library' using call-to-action button | On clicking the call-to-action button, users should instantly be presented with the 'Resource Library' template | PASS |
+| Homepage/appointment form | Fill in an appointment form | Users should be able to fill in all fields of the appointment form. Drop down menus should present viable options and users should be able to select from these | PASS |
+| Homepage/appointment form | Submit appointment form and recieve confirmation feedback | Users should be able to click a 'Submit' button and send the form to a database, recieving a visible alert message to confirm the sending | PASS |
+| Homepage/appointment form | Attempting to book in the past | On trying to book a date in the past, users should not be able to submit the form and will instead be presented with an error alert informing them of the specific nature of the issue | PASS |
+| Homepage/appointment form | Attempting to book a duplicate appointment | Users should not be able to submit a form where there is already a saved entry with teacher/date/time values. Instead they should recieve an error alert informing them of the issue | PASS |
+| Resource Library | View all uploaded resources | All uploaded resources should be displayed in responsive cards, including key details of the resource and a 'Download' button for each | PASS |
+| Resource Library | Pagination in action | When resources go above a quantity of '9', pagination should become enabled and 'prev' and 'next' buttons will appear to support user navigation | PASS |
+| Resource Library | Downloading resources | When a user clicks on the 'Download' button, their resource is displayed as a pdf file in a seperate tab | PASS |
+| Login | Access restrictions | Users can access the login page but cannot proceed further without credentials | PASS |
+
 ## Admin Testing
 
-## Super Admin Testing
+| Feature | User Action| Expected Outcome | Pass? |
+| ----- | -------- | ------- | ------- |
+| Sign Up | Create a school administrator account | Using a private link, users have access to a sign up form requiring a 'username' and 'password' is supplied before allowing the creation of an account | PASS |
+| Sign Up | Redirected to homepage | Once submitted, the sign up form should redirect the now 'admin' to the homepage with added navigational elements present on the navbar | PASS |
+| Logout | Log out from account | On clicking the 'Logout' link, admins should be presented with a modal adding a layer of defensive programming confirming their action | PASS |
+| Logout Modal | Allows successful logout | On confirming the 'logout' action, admins will be returned to the homepage and no longer have access to restricted navigational items | PASS |
+| Appointments | View submitted appointments | On clicking 'Appointments', admins should be able to read all submitted appointment entries | PASS |
+| Appointments | Edit an appointments | On clicking 'Edit' button, admins should be redirected to an edit page where they have access to the appointment form model | PASS |
+| Appointments | Edit an appointment | Filling in the appointment form and clicking 'submit' returns the admin to the 'Appointments' page where the updated changes are visible | PASS |
+| Appointments | Deleting an appointment | On clicking 'Delete' button, admins are presented with a modal adding a layer of defensive programming confirming their action | PASS |
+| Appointments | Deleting an appointment | On confirming the 'Delete' function, admins should be redirected back to the 'Appointments' page where the deleted entry should no longer be visible | PASS |
+| Appointments | Pagination in action | When appointments go above a quantity of '9', pagination should become enabled and 'prev' and 'next' buttons will appear to support admin navigation | PASS |
+| Upload Resources | Access page | Clicking the 'Upload Resource' navigation button sends admins to the edit_resources template where an upload form is visible | PASS |
+| Upload Resources | Attaching a file | The file upload form allows admins to attach a file for uploading | PASS |
+| Upload Resources | Upload feedback | On clicking 'Upload', admins are redirected to the 'Upload Reosurce' page and recieve confirmation via an alert message | PASS |
+| Upload Resources | File upload success | All uploaded files should be visible for users on the 'Resource Library' page. The website must be linked to Cloudinary storage for this to work | PASS |
 
 ## Performance Testing
 
+### HTML
+
+
+### CSS
+
+
+### Python
+
 ## Bugs
 
+During the development process and through consistent user testing, I was able to identify and find solutions to a number of bugs. Engaging with fellow Code Institue students (see 'Credits') I was able to recieve regular user feedback and work on solutions in a timely manner.
+
+| Link to Bug | Description | Solution |
+| ----- | -------- | ------- |
+| [#1](https://github.com/NickdevC/Home-Learning-Hub/issues/21#issue-1574485639) | Choices within a CharField were rendering as numerical values rather than strings | Used the 'get_FOO_display' method [Stack Overflow](https://stackoverflow.com/questions/49091870/django-template-force-choices-on-field-and-print-display-value-with-get-foo-dis) |
+| [#2](https://github.com/NickdevC/Home-Learning-Hub/issues/22#issue-1574493640) | TextField displays html tags along with the content itself to the user | Add the 'safe' tag to my TextField variables [Django Project](https://docs.djangoproject.com/en/1.8/ref/templates/builtins/#safe) |
+| [#3](https://github.com/NickdevC/Home-Learning-Hub/issues/25#issue-1587902889) | The delete modal would not display when users clicked the 'delete' button | Found small syntax differences between Bootstrap 4 and 5. I needed to update to the V5 syntax 'data-**bs**-dismiss=' and link this in my urls.py file |
+| [#4](https://github.com/NickdevC/Home-Learning-Hub/issues/26#issue-1589889951) | Users were able to book duplicate appointments with the same teacher/date/time data | I added the 'unique_together' attrib in the model [Stack Overflow](https://stackoverflow.com/questions/25170071/how-do-i-use-unique-together-in-django) |
+| [#5](https://github.com/NickdevC/Home-Learning-Hub/issues/33#issue-1599959933) | Users were able to book an appointment using a date from the past | I created and added a custom validator to the Appointment model [Django Project](https://docs.djangoproject.com/en/2.2/ref/validators/) |
+| [#5](https://github.com/NickdevC/Home-Learning-Hub/issues/30#issue-1599717586) | When users navigated through different pages, the navbar was unresponsive and did not display any 'active' status | I installed Django Active-Links and added the additional code to the nav-links [Django-Active-Links](https://django-active-link.readthedocs.io/en/latest/readme.html) |
+| [#6](https://github.com/NickdevC/Home-Learning-Hub/issues/31#issue-1599718423) | When uploading a file through the admin panel, the file is visible in Cloudinary storage but does not appear to the user on the front-end | I needed to add '.url' to the href in the 'Resource Library' template |
+| [#7](https://github.com/NickdevC/Home-Learning-Hub/issues/32#issue-1599959327) | When uploading a file from the front-end, the files in question would not appear in Cloudinary storage | I needed to pass ‘request.FILES’ to the ResourceForm [Django Project](https://docs.djangoproject.com/en/4.1/topics/http/file-uploads/) |
+
+[Return to contents](#contents)
 
 # Deployment
 
@@ -186,5 +389,19 @@ The Home Learning Hub app is seperated into two apps, each serving a different p
 
 ## Websites
 
+* [Pixabay](https://pixabay.com/users/elf-moondance-19728901/) - images by artist Elf-Moondance
+* [Getbootstrap](https://getbootstrap.com/docs/5.0/examples/heroes/) - Examples of hero images/banners in Bootstrap5 provided structure for my hero banners
+* [Django Active-Link](https://django-active-link.readthedocs.io/en/latest/readme.html) - Provided me with documentation on how to implement 'active-link' into my project
+* [Stack Overflow](https://stackoverflow.com/questions/49091870/django-template-force-choices-on-field-and-print-display-value-with-get-foo-dis) - Supported me in understanding the 'get_FOO_display' syntax
+* [Stack Overflow](https://stackoverflow.com/questions/25170071/how-do-i-use-unique-together-in-django ) - Supported me in understandin the 'unique_together' attribute
+* [Django Project](https://docs.djangoproject.com/en/4.1/topics/http/file-uploads/) - I learnt how to upload files using the documentation provided by Django Project
+* [Django Project](https://docs.djangoproject.com/en/2.2/ref/validators/) - I learnt how validators work in Django using the documentation provided by Django Project
+
 ## Acknowledgements
+
+* A special mention to my mentor Martina Terlevic who has accomodated me along the way, supporting with queries 'on the fly' and providing invaluable guidance during project milestone meetings. 
+* I have enormous gratitude for the patience, and experience offered by tutor support members: Oisin, Rebecca and Martin. All three helped me work through problems systematically and those processes themselves taught me a great deal with regards to debugging and **reading** code.
+* I also want to thank [Chris.F](https://github.com/Chrisfaherty) and [Chris.B](https://github.com/Christoph33one) (fellow Code Institute students). By joining together and engaging in remote study sessions your conversation and input kept me on track and motivated to push myself with regards to the project. By regularly talking through our code, I'd like to think we replicated as much of the 'agile' process as we could!
+
+[Return to contents](#contents)
 
