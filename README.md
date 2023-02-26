@@ -126,12 +126,73 @@ The Home Learning Hub app is seperated into two apps, each serving a different p
 
 ### Wireframes
 
+#### Homepage
+
+<img src="static/images/wireframes/homepage.png" width="700">
+<img src="static/images/wireframes/homepage2.png" width="700">
+<img src="static/images/wireframes/homepage-mobile.png" width="200">
+
+#### Resource Library
+
+<img src="static/images/wireframes/resources.png" width="700">
+<img src="static/images/wireframes/resources2.png" width="700">
+<img src="static/images/wireframes/resources-mobile.png" width="200">
+
+#### Login
+
+<img src="static/images/wireframes/sign-in.png" width="700">
+
+#### Appointments
+
+<img src="static/images/wireframes/appointments.png" width="700">
+<img src="static/images/wireframes/appointments-mobile.png" width="200">
+
+#### Edit Appointments
+
+<img src="static/images/wireframes/edit-appointment.png" width="700">
+
+#### Upload Resource
+
+<img src="static/images/wireframes/upload-resource.png" width="700">
+
+
 ### Colour
+
+
+<img src="static/images/main-colour.png" width="auto">
+
 
 ### Typography
 
-### Features
 
+<img src="static/images/schoolbell-font.png" width="auto">
+
+<img src="static/images/roboto-font.png" width="auto">
+
+
+### Features 
+
+#### Navbar (`user`)
+
+<img src="static/images/screenshots/user-nav.png" width="auto">
+
+#### Navbar (`admin`)
+
+<img src="static/images/screenshots/admin-nav.png" width="auto">
+
+#### Footer (`user` and `admin`)
+
+<img src="static/images/screenshots/footer.png" width="auto">
+
+#### Homepage (`user` and `admin`)
+
+<img src="static/images/screenshots/homepage-hero.png" width="auto">
+
+<img src="static/images/screenshots/appointment-form.png" width="auto">
+
+#### Alert (`user` and `admin`)
+
+<img src="static/images/screenshots/appointment-form.png" width="auto">
 
 # Technologies Used
 
