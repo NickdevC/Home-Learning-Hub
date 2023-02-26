@@ -6,7 +6,6 @@
 
 *  [Purpose](#purpose)
 *  [User Experience](#user-experience)
-*  [Features](#features)
 *  [Design](#design)
 *  [Technologies Used](#technologies-used)
 *  [Testing](#testing)
@@ -101,10 +100,10 @@ Here I have documented *some* of the tasks I created to demonstrate my agile app
 | [#5](https://github.com/NickdevC/Home-Learning-Hub/issues/27#issue-1591558422) | Create a new 'resources_app' within Django to setup the resources page structure and functionality |
 
 
-# Features
-
-
 # Design
+
+## Agile Approach
+
 
 ## Technical Design
 
@@ -121,3 +120,66 @@ The Home Learning Hub app is seperated into two apps, each serving a different p
 <img src="static/images/file_structure.png" width="auto">
 
 ## UI Design
+
+### Wireframes
+
+### Colour
+
+### Typography
+
+### Features
+
+
+# Technologies Used
+
+## Languages
+[HTML](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) - The markup language used to create the structure of the site.
+[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Used to style elements of the site.
+[JavaScript](https://www.javascript.com/) - Used to add interactivity to elements of the site.
+[Python](https://www.python.org/) - Primary language used to develop the back-end portions of the site.
+
+## Frameworks/libraries
+[Django](https://www.djangoproject.com/) - Python web framework providing pre-built syntax structures and providing essential 'app' file structures.
+  - [Django AllAuth](https://django-allauth.readthedocs.io/en/latest/) - Integrated set of Django applications addressing authentication, registration, and account management.
+  - [Django Summernote](https://github.com/summernote/django-summernote) - A simple WYSIWYG editor for use with Django.
+  - [Django CrispyForms](https://django-crispy-forms.readthedocs.io/en/latest/) - Gives added control and choices with regards to the rendering behavior of Django forms.
+  - [Django Active-Link](https://django-active-link.readthedocs.io/en/latest/readme.html) - A simple way to highlight active links in a Django app.
+
+## Databases
+[ElephantSQL](https://www.elephantsql.com/) - Database used to store all models and user-generated data.
+
+## Other Tools
+[Heroku](https://www.heroku.com/) - A cloud platform used for hosting the app.
+[Github](https://github.com/github) - Used to host my app's source code. Also provided the tools for creating *issues* and a *kanban board* for my agile approach to development.
+[Git](https://git-scm.com/) - Git is an open source distributed version control system used to manage all code.
+[Pip3](https://pypi.org/project/pip/) - The package installer for Python, used to install packages from the Python Package Index and other indexes.
+[Gunicorn](https://gunicorn.org/) - Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX (translates HTTP requests for Python to understand).
+[Pyscopg2](https://pypi.org/project/psycopg2/) - PostgreSQL database adapter for Python.
+[VScode](https://code.visualstudio.com/) - A code editor redefined and optimized for building and debugging modern web and cloud applications. 
+[Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - A set of web developer tools built directly into the Google Chrome browser. Used to help debug my code during development.
+[Google Fonts](https://fonts.google.com/) - A font catalogue, providing a variety of free custom fonts.
+[Font Awesome](https://fontawesome.com/) - An online icon library, used to provide small icons for social links and navigation functions.
+[Balsamiq](https://balsamiq.com/wireframes/) - Used to create wireframes of the site during planning stages.
+[Lucidchart](https://www.lucidchart.com/pages/) - Used to create and display model structures.
+
+
+
+# Testing
+
+## User Testing
+
+## Admin Testing
+
+## Super Admin Testing
+
+## Performance Testing
+
+
+# Deployment
+
+# Credits
+
+## Websites
+
+## Personal Acknowledgements
+
