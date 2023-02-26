@@ -20,7 +20,7 @@
             <p><strong>Date:</strong> {{ appointment.date }} | <strong>Time:</strong>
                 {{ appointment.get_time_display }}</p>
 
-            <p id="appointment-comment">{{ appointment.comment|safe }}</p>
+            <p id="appointment-note">{{ appointment.comment|safe }}</p>
 
             <!-- Edit button -->
             <a href="/edit/{{ appointment.id }}" class="btn btn-primary">Edit</a>
@@ -71,6 +71,5 @@
     </ul>
 </nav>
 {% endif %}
-</div>
-</div>
+
 {%endblock%}
