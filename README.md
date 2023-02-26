@@ -372,6 +372,12 @@ HTML code was run through a validator with only one reoccuring error (see image)
 
 <img src="static/images/css-validation.png" width="auto">
 
+### Python
+
+**Note - PEP8 no longer offers their validation services**
+
+With 'pycodestyle' installed in my workspace, I was able to see and correct errors within my code. I am satisfied that those errors have now been resolved.
+
 ## Bugs
 
 During the development process and through consistent user testing, I was able to identify and find solutions to a number of bugs. Engaging with fellow Code Institue students (see 'Credits') I was able to recieve regular user feedback and work on solutions in a timely manner.
