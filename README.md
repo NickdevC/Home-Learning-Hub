@@ -391,8 +391,12 @@ During the development process and through consistent user testing, I was able t
 
 # Deployment
 
+This app was deployed through Heroku. The live link is [here](https://nickdevc-home-learning-hub.herokuapp.com/)
 
-
+- Fork/clone this repository
+- Create a new app on Heroku
+- Link the app on Heroku to the repository
+- Click on the 'Deploy' button
 
 # Credits
 
