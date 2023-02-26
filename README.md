@@ -174,27 +174,103 @@ The Home Learning Hub app is seperated into two apps, each serving a different p
 
 #### Navbar (`user`)
 
+* The navbar includes simple branding, in the form of the website logo (situated at the upper-left-corner). It is fully responsive and reduces to a 'burger menu' when screen size is reduced. In order to maintain a simple level of playfulness (often synonymous with schools), I have added minor user feedback in the form of a small 'drop' effect on each navbar item. In addition to this, I have used [Django Active-Link](https://django-active-link.readthedocs.io/en/latest/readme.html) to ensure that the navbar items are highlighted when 'active'.
+
 <img src="static/images/screenshots/user-nav.png" width="auto">
 
 #### Navbar (`admin`)
+
+* The navbar for `admins` is much the same as `users`, with the addition of other authorised pages available to navigate to.
 
 <img src="static/images/screenshots/admin-nav.png" width="auto">
 
 #### Footer (`user` and `admin`)
 
+* The footer is a simple in it's design, following the same colour scheme as the rest of the site. I purposely did not add much styling to this as I wanted the main focus of the site to remain the **booking of appointments** and the **downloading of resources** for `users`. It includes simple social links to the developer, but could easily incorporate personalised social links for each individual school if the product became live.
+
 <img src="static/images/screenshots/footer.png" width="auto">
 
 #### Homepage (`user` and `admin`)
 
+* The hero banner of the homepage was designed to be minimal, so as to not detract from the clear purpose and functionality of the site, whilst also feeling uncomplicated and non-threatening to a new user. The simple cartoon imagery provides a welcome and warm feel, whilst the small amount of text helps explain the purpose of the site. There is also the addition of a **call to action** button, which encourages users to access the **resource library**, reducing the amount of navigation required from the user to reach their goals.
+
 <img src="static/images/screenshots/homepage-hero.png" width="auto">
 
+* The appointment form can be filled in by any visitor to the site, and you do not require a login to access it (whilst this may be something to change in the future for security purposes and to filter out unecessary communication, for now it fulfills the minimal requirements for the site). It allows the user to input all necessary fields to book an appointment with their child's teacher. A dropdown menu provides a list of `choices` for both the *teacher* and *time* options. In addition, there is a `date field` which allows the suer to pick a date for the appointment. I have ensured that the form cannot accept duplicate teacher/time/date slots, and will also prevent the user from booking a date in the past. See [bugs section](#bugs) for more details.
+
+* This user interaction also forms the first part of the `CRUD` design, that being the `CREATE` stage.
+
 <img src="static/images/screenshots/appointment-form.png" width="auto">
 
-#### Alert (`user` and `admin`)
+#### Appointment Form Alerts (`user` and `admin`)
 
-<img src="static/images/screenshots/appointment-form.png" width="auto">
+* On successfully filling in the 'appointments form', the following alert message appears in order to give the user instant feedback and reassure them that the form has been recieved by the school. After 3 seconds, the alert disappears and the user is back on the homepage.
 
-# Technologies Used
+<img src="static/images/screenshots/appointment-success.png" width="auto">
+
+* If the form is filled in using a date from the past, the following error alert message appears at the top of the page. This gives the user a clear indication of what fields to check before rectifying the issue. **The form is not submitted until the issue is resolved.**
+
+<img src="static/images/screenshots/past-date-alert.png" width="auto">
+
+* In addition, the `date field` displays the following error to make it even clearer to the user.
+
+<img src="static/images/screenshots/date-error.png" width="auto">
+
+* If the user enters a combination of teacher/date/time where another entry already exists within the database, the following alert appears at the top of the page. This prompts the user to change their selection before continuing. **The form is not submitted until the issue is resolved.**
+
+<img src="static/images/screenshots/duplicate-error.png" width="auto">
+
+#### Resources (`user`)
+
+* On entering the 'Resources' page, `users` are met with another hero banner, designed to present a welcoming feel and promote accessibility. The image is in-line with the homepage in terms of branding, and the accompanying text helps to explain the purpose and role of the page itself.
+
+<img src="static/images/screenshots/resources-hero.png" width="auto">
+
+* The resources page displays all uploaded resources for `users` to access and download (opening in a seperate tab). These resources appear in small, simple cards, displaying only the most vital information. Pagination is in place to ensure that the screen does not become overcrowded with further resources being added. 
+
+<img src="static/images/screenshots/resource-cards.png" width="auto">
+
+#### Login (`user` and `admin`)
+
+* This page is open to all users, however only `admins` have the ability to supply credentials here and open up other parts of the site. There is a text prompt which instructs users to contact their school administrator for login details (please see next 'Sign Up' section).
+
+<img src="static/images/screenshots/sign-in-form.png" width="auto">
+
+#### Sign Up (`admin`)
+
+**Important! This page is a hidden template, and would be issued by the main school administrator (`Super User`) for other administration staff (`admins`) to access.** [Please find the page here]()
+
+* This sign up page displays a clear, uncomplicated sign up form, supported by [Django's AllAuth applications](https://django-allauth.readthedocs.io/en/latest/). It allows school administration staff to sign up and create secure accounts to access restricted pages within the site.
+
+<img src="static/images/screenshots/sign-up-form.png" width="auto">
+
+#### Appointments (`admin`)
+
+* On successfully signing in, `admins` have access to the 'Appointments' page, where they can manage the appointments made by `users`. Here, the details of each individual appointment are clearly displayed in small cards. Again, with functionality in mind, the level of styling is minimal here as any more refinement may detract from the sole purpose of the app, and the goals of the `admins`. Each appointment also contains buttons for 'Edit' and 'Delete'.
+
+* This user interaction also forms the second part of the `CRUD` design, that being the `READ` stage.
+
+<img src="static/images/screenshots/appointment-cards.png" width="auto">
+
+* On selecting 'Edit', `admins` are taken to the 'edit_appointment' template and can update any of the details for the appointment before saving these changes and being returned to the 'Appointments' page.
+
+* This user interaction also forms the third part of the `CRUD` design, that being the `UPDATE` stage.
+
+<img src="static/images/screenshots/edit-appointment-form.png" width="auto">
+
+* On selecting 'Delete', `admins` are presented with a modal, used as an element of defensive programming, in order to confirm the action before permanently deleting the appointment from both the front-end view and the database. On confirming the deletion, they are returned back to the 'Appointments' page.
+
+* This user interaction also forms the fourth part of the `CRUD` design, that being the `DELETE` stage.
+
+<img src="static/images/screenshots/delete-modal.png" width="auto">
+
+#### Upload Resources (`admin`)
+
+* The 'Upload Resources' page provides `admins` with a form which allows them to upload resources for `users` to use at home to support their child's learning. Here you can specify the name of the resource, the subject and with the `CloudinaryField`, all uploaded resources are stored in the [Cloudinary database](https://cloudinary.com/), and then rendered in the 'Resources' page for all `users` to access. 
+
+<img src="static/images/screenshots/upload-resource-form.png" width="auto">
+
+# Technologies Used 
 
 ## Languages
 * [HTML](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) - The markup language used to create the structure of the site.
@@ -211,6 +287,7 @@ The Home Learning Hub app is seperated into two apps, each serving a different p
 
 ## Databases
 * [ElephantSQL](https://www.elephantsql.com/) - Database used to store all models and user-generated data.
+* [Cloudinary](https://cloudinary.com/) - Cloud database for storing images and uploaded files from the front-end of my app.
 
 ## Other Tools
 * [Heroku](https://www.heroku.com/) - A cloud platform used for hosting the app.
