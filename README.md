@@ -163,14 +163,18 @@ The Home Learning Hub app is seperated into two apps, each serving a different p
 
 ### Colour
 
+* I decided to keep the colour scheme very simple and focused on one particular shade of green. Across the website, I have slightly altered the tone of this one shade (for shadows, highlights and links), but have not moved away from the base colour. The reasoning behind this was to establish a very clear and identifiable brand. In addition, other colours were not necessary in promoting the main purposes of the site. The result is clean and welcoming to users.
 
 <img src="static/images/main-colour.png" width="auto">
 
 
 ### Typography
 
+* In keeping with the themes of 'education' and 'school', I felt that the 'schoolbell' font was most appropriate for headings throughout the site. It is playful and, due to the simplicity of the site's design, it does not detract from the serious purpose of the site itself. By keeping headings consistently in this font, the brand identity is further strengthened.
 
 <img src="static/images/schoolbell-font.png" width="auto">
+
+* 'Roboto' font was used for any remaining text as it is simple to read and is highly accessible when screen sizes are altered.
 
 <img src="static/images/roboto-font.png" width="auto">
 
