@@ -2,6 +2,8 @@
 
 <img src="static/images/responsive.png" width="auto">
 
+[Deployed Live Site](https://nickdevc-home-learning-hub.herokuapp.com/)
+
 ## Contents
 
 *  [Purpose](#purpose)
@@ -430,6 +432,8 @@ This app was deployed through Heroku. The live link is [here](https://nickdevc-h
 * A special mention to my mentor Martina Terlevic who has accomodated me along the way, supporting with queries 'on the fly' and providing invaluable guidance during project milestone meetings. 
 * I have enormous gratitude for the patience, and experience offered by tutor support members: Oisin, Rebecca and Martin. All three helped me work through problems systematically and those processes themselves taught me a great deal with regards to debugging and **reading** code.
 * I also want to thank [Chris.F](https://github.com/Chrisfaherty) and [Chris.B](https://github.com/Christoph33one) (fellow Code Institute students). By joining together and engaging in remote study sessions your conversation and input kept me on track and motivated to push myself with regards to the project. By regularly talking through our code, I'd like to think we replicated as much of the 'agile' process as we could!
+
+[Deployed Live Site](https://nickdevc-home-learning-hub.herokuapp.com/)
 
 [Return to contents](#contents)
 
