@@ -395,6 +395,14 @@ During the development process and through consistent user testing, I was able t
 
 [Return to contents](#contents)
 
+## Future Features
+
+If I were to have more time on the project I would consider implementing the following features:
+* Different user models, allowing for different privileges across the site. For example, user could be split into: Admin, Teacher, Parent, and Pupil.
+* Automated email confirmation - this is something that I put as a `Could Have` user story on my [kanban board](https://github.com/users/NickdevC/projects/4) and would essentially require users to supply an email address when booking an appointment. When the appointment was submitted, they would receive an email confirmation and a link to apply the appointment to their calendar.
+* Integrate an app for facilitating a video/audio appointment (I would need to look into whether there are APIs already available to facilitate this)
+
+
 # Deployment
 
 This app was deployed through Heroku. The live link is [here](https://nickdevc-home-learning-hub.herokuapp.com/)
