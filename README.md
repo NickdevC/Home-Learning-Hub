@@ -366,9 +366,13 @@ The Learning Hub app is seperated into two apps, each serving a different purpos
 
 ### HTML Validation
 
-HTML code was run through a validator with only one reoccuring error (see image). This error did not seem to affect the overall performance of the site, and was a requirement for one of the installed libraries, therfor I deemed it necessary to ignore the error.
+* HTML code was run through a validator with one reoccuring error (see image). This error did not seem to affect the overall performance of the site, and was a requirement for one of the installed libraries, therfor I deemed it necessary to ignore the error.
 
 <img src="static/images/html-error.png" width="auto">
+
+* In addition, my 'appointments.html' template had an error regarding the repetition of an ID linked to my delete modal. I have tried to find a solution to correct this, and have tried suggestions from the Slack community but none have proven to be successful. The page functions and passes all other tests, and I have limited time to work on this. If I had more time, I would look to resolving the issue.
+
+<img src="static/images/modal-error.png" width="auto">
 
 ### CSS
 
