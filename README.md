@@ -250,7 +250,7 @@ The Learning Hub app is seperated into two apps, each serving a different purpos
 
 #### Sign Up (`admin`)
 
-**Important! This page is a hidden template, and would be issued by the main school administrator (`Super User`) for other administration staff (`admins`) to access.** [Please find the page here]()
+**Important! This page is a hidden template, and would be issued by the main school administrator (`Super User`) for other administration staff (`admins`) to access.** [Please find the page here](https://nickdevc-home-learning-hub.herokuapp.com/accounts/signup)
 
 * This sign up page displays a clear, uncomplicated sign up form, supported by [Django's AllAuth applications](https://django-allauth.readthedocs.io/en/latest/). It allows school administration staff to sign up and create secure accounts to access restricted pages within the site.
 
